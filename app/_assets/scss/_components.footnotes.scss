@@ -1,0 +1,34 @@
+//====================================
+//  Footnotes
+//====================================
+
+// To create a bookmark use this markdown syntax[^1]
+
+// To describe a footnote use this syntax:
+// [^1]: Description of the footnote
+
+.footnote {
+  @include link-colors($very-dark-magenta, $very-dark-magenta, $very-dark-magenta, $very-dark-magenta, $very-dark-magenta);
+  cursor: help;
+  font-size: modular-scale(0);
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.footnotes {
+  clear: both;
+  color: rgba($very-dark-magenta, 0.5);
+  font-size: modular-scale(0);
+  line-height: 1.5;
+
+  ol {
+    list-style: decimal;
+  }
+}
+
+.reversefootnote {
+  @include link-colors($very-dark-magenta, $very-dark-magenta, $very-dark-magenta, $very-dark-magenta, $very-dark-magenta);
+  border: 0;
+  margin-left: 0.25em;
+  text-decoration: none;
+}

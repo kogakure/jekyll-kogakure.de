@@ -1,0 +1,32 @@
+//====================================
+//  Container
+//====================================
+
+// Effects
+.container {
+  overflow-x: hidden;
+  transition: transform 0.5s;
+
+  &::after {
+    background: rgba(0, 0, 0, 0.6);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+    visibility: hidden;
+    width: 100%;
+  }
+
+  &.container--overlay {
+    transform: translate3d(50%, 0, 0);
+
+    &::after {
+      opacity: 1;
+      transition: opacity 0.5s;
+      visibility: visible;
+    }
+  }
+}

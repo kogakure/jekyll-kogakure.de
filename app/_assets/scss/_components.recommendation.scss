@@ -1,0 +1,250 @@
+//====================================
+//  Recommendations
+//====================================
+
+// Image gallery created by MosaicFlow.
+// Elements will be put into columns (.gallery__column)
+// created by JavaScript
+
+.recommendation {
+  @include clearfix;
+  clear: both;
+  list-style: none;
+  margin-bottom: $default-spacing-bottom;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.recommendation--latest {
+  .recommendation__item {
+    margin: 0 10px 10px 0;
+  }
+}
+
+.recommendation__column {
+  float: left;
+
+  .recommendation__image {
+    width: 100%;
+  }
+}
+
+.recommendation__item {
+  margin: 0 10px 10px 0;
+  position: relative;
+}
+
+.recommendation__layer {
+  cursor: pointer;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  width: 300px; // Only fallback
+
+  &:hover {
+    background: $black;
+
+    .recommendation__info {
+      &::before {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .recommendation__image {
+      opacity: 0.3;
+      transform: scale(1.15);
+    }
+
+    .recommendation__info__title {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .recommendation__info__contributors,
+    .recommendation__info__details {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+
+  .recommendation__column & {
+    width: auto;
+  }
+}
+
+.recommendation__link {
+  font-size: 0;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  text-indent: 200%;
+  top: 0;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 1000;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.recommendation__image {
+  display: block;
+  height: auto;
+  width: auto;
+}
+
+.recommendation__info {
+  backface-visibility: hidden;
+  color: $white;
+  font-size: 90%;
+  height: 100%;
+  left: 0;
+  padding: 2em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  // Border
+  &::before {
+    border: 1px solid $white;
+    bottom: 1em;
+    content: '';
+    left: 1em;
+    opacity: 0;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    transform: scale(0);
+    transition: opacity 0.25s, transform 0.25s;
+  }
+}
+
+.recommendation__info__title {
+  color: $strong-green;
+  font-size: modular-scale(1);
+  margin: 0;
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.recommendation__info__contributors,
+.recommendation__info__details {
+  font-size: 70%;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 1em 0 0;
+  opacity: 0;
+  transform: translate3d(0, 20px, 0) scale(1.1);
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.recommendation__info__details__title,
+.recommendation__info__details__definition {
+  display: inline;
+}
+
+.recommendation__info__details__title {
+  color: $dark-moderate-green;
+
+  &:before {
+    content: "";
+    display: block;
+  }
+
+  &:after {
+    content: ":";
+    margin-right: 5px;
+  }
+}
+
+.recommendation__new {
+  background: $white;
+  border-radius: $default-border-radius;
+  bottom: 1.5em;
+  box-shadow: 0 1px 2px $black;
+  line-height: 1.3;
+  padding: 0.1em 0.3em 0;
+  position: absolute;
+  right: 1.5em;
+  text-transform: uppercase;
+}
+
+// Recommendations for the homepage
+.recommendations {
+  background: rgba($very-dark-magenta, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
+  clear: both;
+  margin-bottom: $default-spacing-bottom;
+  padding: 0 0 0.5em;
+  position: relative;
+}
+
+.recommendations__link {
+  bottom: 1em;
+  color: $very-dark-magenta;
+  font-size: modular-scale(0);
+  position: absolute;
+  right: 1em;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.recommendation--homepage {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.5em;
+}
+
+.recommendation--homepage__item {
+  flex-basis: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  list-style: none;
+  text-align: center;
+
+  @include breakpoint(280px) {
+    flex-basis: 50%;
+  }
+
+  @include breakpoint(360px) {
+    flex-basis: 33%;
+  }
+
+  @include breakpoint(550px) {
+    flex-basis: 25%;
+  }
+
+  @include breakpoint(780px) {
+    flex-basis: 15%;
+  }
+}
+
+.recommendation--homepage__link {
+  background: $black;
+  display: inline-block;
+  margin: 0.5em 0;
+  padding: 0;
+}
+
+.recommendation--homepage__image {
+  border: 1px solid rgba($black, 0.5);
+  box-shadow: 0 1px 2px rgba($black, 0.5);
+  display: block;
+
+  &:hover {
+    opacity: 0.3;
+  }
+}

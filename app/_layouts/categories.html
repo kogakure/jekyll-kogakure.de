@@ -1,0 +1,18 @@
+---
+layout: "default"
+body_class: "page-categories"
+---
+
+<h1>{% if page.title or post.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</h1>
+
+{% include categories_list.html %}
+
+<section class="article-list custom-underline">
+  <ul>
+    {% for post in site.categories[page.category] %}
+      <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

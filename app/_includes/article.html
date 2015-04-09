@@ -1,0 +1,29 @@
+{% if page.widont == false %}
+<h1 class="article__title">{% if page.title or post.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</h1>
+{% else %}
+<h1 class="article__title">{% if page.title or post.title %}{{ page.title | widont }}{% else %}{{ site.data.settings.title | widont }}{% endif %}</h1>
+{% endif %}
+
+{% unless page.meta == false %}
+
+  <div class="article__meta">
+    {% if page.author %}
+      <span class="article__author">
+        <em class="article__author__byline">von</em> {% include post/author.html %}
+      </span>
+    {% endif %}
+
+    {% if page.author and page.categories.size > 0 %} · {% endif %}
+
+    {% if page.categories.size > 0 %}
+      <span class="classification">
+        {% include post/categories.html %}
+      </span>
+    {% endif %}
+
+  </div>
+
+
+{% endunless %}
+
+<div class="article-body custom-underline">{{ content }}</div>

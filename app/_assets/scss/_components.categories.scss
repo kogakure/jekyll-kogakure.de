@@ -1,0 +1,30 @@
+//====================================
+//  Categories
+//====================================
+
+.classification {
+  display: inline-block;
+}
+
+.categories__link {
+  @include link-colors($black, $white);
+  background: $category-background;
+  border-radius: 2px;
+  color: $black;
+  font-size: 12px;
+  padding: 2px 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $category-background;
+  }
+}
+
+
+// Listen-Items laufen inline
+.categories--inline {
+  .categories__item {
+    display: inline;
+  }
+}

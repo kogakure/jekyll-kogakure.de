@@ -1,0 +1,39 @@
+//====================================----
+//  Pagination
+//====================================----
+
+.pagination {
+  @extend %clearfix;
+}
+
+.pagination__link {
+  background: $pagination-background;
+  border-radius: 2px;
+  color: $black;
+  position: relative;
+  text-decoration: none;
+  text-shadow: none;
+
+  &:hover {
+    background: $pagination-background;
+    color: $white;
+  }
+}
+
+.pagination__icon {
+  fill: $white;
+  height: 15px;
+  position: relative;
+  top: 1px;
+  width: 15px;
+}
+
+.pagination--left {
+  float: left;
+  padding: 2px 7px 0 5px;
+}
+
+.pagination--right {
+  float: right;
+  padding: 2px 5px 0 7px;
+}

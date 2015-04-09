@@ -1,0 +1,12 @@
+//====================================
+//  Images
+//====================================
+
+img,
+a img {
+  border: $image-border-size solid $image-border-color;
+  height: auto !important;
+  max-width: 100%;
+  vertical-align: bottom;
+  width: auto\9; // ie8
+}

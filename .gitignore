@@ -1,0 +1,7 @@
+# Ignore hidden directories
+.*/
+
+vendor/bundle/
+node_modules/
+app/_bower_components/
+build

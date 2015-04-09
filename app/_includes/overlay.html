@@ -1,0 +1,16 @@
+<div class="overlay">
+
+  <button type="button" class="overlay__close">
+    <svg class="overlay__close__icon"><use xlink:href="#close"></use></svg>
+  </button>
+
+  <nav id="navigation" class="nav">
+    <ul class="nav__menu">
+      {% for navigation in site.data.navigation %}
+        <li class="nav__item">
+          <a href="{{ navigation.url }}" class="nav__link">{{ navigation.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

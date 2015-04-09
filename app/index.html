@@ -1,0 +1,116 @@
+---
+layout: default
+description: "Fachmagazin für Ninja, Ninjutsu und Kampfkunst."
+body_class: "fullsize-grid page-home"
+homepage: true
+---
+
+<div class="homepage-tagline">
+  <p class="homepage-tagline__japanese">忍法一貫</p>
+  <p class="homepage-tagline__translation"><q>Ninpō Ikkan</q> (jap. <q>Ninjutsu ist der Anfang und kennt kein Ende.</q>)</p>
+</div>
+
+<div class="homepage-intro">
+  <div class="homepage-intro__text custom-underline">
+    <p>Willkommen auf <strong>kogakure.de</strong>. Seit 1999 kann man hier Artikel, Textsammlungen und Übersetzungen zu Themen rund um die japanischen Schattenkrieger und Spione, die <strong>Ninja</strong>, und deren Kampfkunst <strong>Ninjutsu</strong> lesen.</p>
+    <p>Beim ersten Besuch empfehle ich, zuerst mit dem Artikel <a href="/artikel/ninjutsu/">Ninjutsu</a> zu starten, eine Übersicht über alle Artikel ist im <a href="/artikel/">Artikelverzeichnis</a> zu finden.</p>
+  </div>
+
+  <div class="homepage-flipboard">
+    {% include flipboard.html %}
+  </div>
+</div>
+
+<div class="categories-download">
+  <div class="homepage-categories">
+    <h2>Kategorien</h2>
+    {% include categories_list.html %}
+  </div>
+
+  <div class="homepage-download">
+    <h2>Download</h2>
+    <p>Die Ninja von Iga verwendeten eine <strong>Geheimschrift</strong>. Ich habe aus der Holztafel des Ninja-Museums von Iga eine Schriftart zum <a href="/downloads/ingo.zip">Download</a> erstellt.</p>
+  </div>
+</div>
+
+<div class="homepage-dictionary">
+  <h2>Lexikon</h2>
+  <div class="card homepage-dictionary__flex">
+    <div class="homepage-dictionary__japanese">
+      <div class="homepage-dictionary__card">
+        <ruby class="homepage-dictionary__kanji">忍<rp>（</rp><rt class="homepage-dictionary__kana">しのぶ</rt><rp>）</rp></ruby>
+      </div>
+    </div>
+    <div class="homepage-dictionary__definitions">
+      <ol>
+        <li>ertragen, aushalten, dulden</li>
+        <li>verstecken, verbergen, spähen, schleichen</li>
+      </ol>
+    </div>
+    <a href="/lexikon/" class="card__link custom-underline-link">Mehr Einträge ansehen</a>
+  </div>
+</div>
+
+<div class="homepage-quote">
+  <h2>Zitate</h2>
+  <div class="card">
+    <div class="homepage-quote__flex">
+      <blockquote class="homepage-quote__blockquote">
+        <p>Die Weisheit des Lebens besteht im Ausschalten der unwesentlichen Dinge.</p>
+        <footer class="homepage-quote__footer">
+          <strong class="homepage-quote__author">aus China</strong>
+      </blockquote>
+    </footer>
+      <a href="/zitate/" class="card__link custom-underline-link">Mehr Zitate ansehen</a>
+    </div>
+  </div>
+</div>
+
+<h2>Kaufempfehlungen</h2>
+<div class="recommendations">
+  <ul class="recommendation--homepage books">
+    {% assign recommended_books = site.data.products.books | where:"recommendation",true %}
+    {% assign recommended_movies = site.data.products.movies | where:"recommendation",true %}
+    {% for book in recommended_books limit:3 %}
+      <li class="recommendation--homepage__item">
+        <a class="recommendation--homepage__link" href="http://www.amazon.de/gp/product/{{ book.asin }}?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN={{ movie.asin }}" target="_blank">
+          <img class="recommendation--homepage__image" width="100" src="/assets/images/{{ book.thumbnail }}" alt="{{ book.title }}" itemprop="image">
+        </a>
+      </li>
+    {% endfor %}
+    {% for movie in recommended_movies limit:3 %}
+      <li class="recommendation--homepage__item">
+        <a class="recommendation--homepage__link" href="http://www.amazon.de/gp/product/{{ movie.asin }}?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN={{ movie.asin }}" target="_blank">
+          <img class="recommendation--homepage__image" width="100" src="/assets/images/{{ movie.thumbnail }}" itemprop="image">
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="/kaufempfehlungen/" class="recommendations__link">Mehr Empfehlungen ansehen</a>
+</div>
+
+<h2>Suche</h2>
+<div class="search">
+  {% include search.html %}
+</div>
+
+<h2>Soziale Netzwerke</h2>
+<div class="social">
+  <ul class="social__list">
+    <li class="social__item">
+      <a href="{{ site.data.settings.social.facebook_url }}" class="social__link" title="Facebook Page"><svg class="social__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a>
+    </li>
+    <li class="social__item">
+      <a href="{{ site.data.settings.social.googleplus_url }}" class="social__link" title="Google+ Page"><svg class="social__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#googleplus"></use></svg></a>
+    </li>
+    <li class="social__item">
+      <a href="{{ site.data.settings.social.googleplus-communities_url }}" class="social__link" title="Google+ Community"><svg class="social__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#googleplus-communities"></use></svg></a>
+    </li>
+    <li class="social__item">
+      <a href="{{ site.data.settings.social.pinterest_url }}" class="social__link" title="Pinterest Board"><svg class="social__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pinterest"></use></svg></a>
+    </li>
+    <li class="social__item">
+      <a href="{{ site.data.settings.social.feedburner_url }}" class="social__link" title="Feed"><svg class="social__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#feed"></use></svg></a>
+    </li>
+  </ul>
+</div>

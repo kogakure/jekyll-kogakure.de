@@ -1,0 +1,18 @@
+---
+layout: page
+title: "Zitate"
+description: "Eine Sammlung von Sprüchen, Zitaten und Aussagen"
+permalink: "/zitate/"
+body_class: "page-quotes"
+---
+
+<p>Diese Sammlung enthält <strong>{{ site.data.quotes | size }}</strong> Sprüche, Zitate und Aussagen. Da ich leider schon einmal abgemahnt wurde, sind alle hier aufgeführten Einträge entweder von anonymen Quellen oder die Urheber sind bereits lang genug tot.</p>
+
+{% for quote in site.data.quotes %}
+  <blockquote class="quote">
+    <p>{{ quote.text | newline_to_br }}</p>
+    <footer class="quote__footer">
+      {% if quote.author %}<strong class="quote__author">{{ quote.author }}</strong>{% if quote.cite %},{% endif %} <cite class="quote__cite">{{ quote.cite }}</cite>{% endif %}
+    </footer>
+  </blockquote>
+{% endfor %}

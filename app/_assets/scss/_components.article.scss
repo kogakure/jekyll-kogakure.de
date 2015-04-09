@@ -1,0 +1,24 @@
+//====================================
+//  Article
+//====================================
+
+.article__title,
+.article__meta {
+  @include breakpoint($grid-breakpoint-xlarge) {
+    text-align: center;
+  }
+}
+
+.article__meta {
+  font-size: 14px;
+  margin-bottom: 3em;
+}
+
+.article__author {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.article__author__byline {
+  font-weight: normal;
+}

@@ -1,0 +1,12 @@
+---
+layout: "default"
+body_class: "page-post"
+---
+
+<main class="main{% if page.page_class %} {{ page.page_class }}{% endif %}" role="main">
+  <article class="article" role="article">
+    {% include article.html %}
+    {% include related_posts.html %}
+    {% include post/pagination.html %}
+  </article>
+</main>

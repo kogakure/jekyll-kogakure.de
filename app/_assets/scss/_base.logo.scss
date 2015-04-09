@@ -1,0 +1,25 @@
+//====================================
+//  Logo
+//====================================
+
+.logo {
+  @extend %text-hidden;
+  background-color: rgba($site-background, 0.7);
+  background-image: url("/assets/images/svg/logo.svg");
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  background-size: 60px;
+  border-radius: 10px;
+  display: inline-block;
+  height: 65px;
+  position: relative;
+  top: 40px;
+  width: 70px;
+
+  @include breakpoint($grid-breakpoint-xxlarge) {
+    background-color: transparent;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+  }
+}

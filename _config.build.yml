@@ -1,0 +1,14 @@
+# ==================== #
+#   Jekyll  Settings   #
+# ==================== #
+# P R O D U C T I O N  #
+# ==================== #
+
+# URLs/Paths
+url:         "http://kogakure.de"
+server_path: /to/my/website/
+
+# Publishing
+future:      false
+show_drafts: false
+limit_posts: 0

@@ -1,0 +1,33 @@
+//====================================
+//  Verse
+//====================================
+
+.verse {
+  background: $white;
+  border: 0;
+  margin: 0;
+  margin-bottom: $default-spacing-bottom;
+  padding: 0;
+}
+
+.verse__box {
+  font-family: inherit;
+  margin: $default-spacing;
+  overflow-x: auto;
+  padding: 1.5em 0;
+}
+
+.verse__author {
+  &:before {
+    @include breakpoint($grid-breakpoint-medium) {
+      content: '–';
+      padding-left: 0.3em;
+      padding-right: 0.3em;
+    }
+  }
+}
+
+.verse__box p {
+  border: 0;
+  padding: 0;
+}

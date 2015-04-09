@@ -1,0 +1,100 @@
+# =============== #
+# Jekyll Settings #
+# =============== #
+
+# URLs/Paths
+baseurl:   ""
+url:       "http://0.0.0.0:8888"
+root:      /
+permalink: /artikel/:title/
+
+# Jekyll paths
+source:      ./app
+destination: ./build
+
+# Publishing
+encoding:    "utf-8"
+future:      true
+show_drafts: true
+limit_posts: 5
+# limit_posts: 0
+
+# Server
+date_format: "%d.%m.%Y"
+titlecase:   false
+port:        8888
+timezone:    local
+markdown:    kramdown
+lsi:         true
+language:    "de"
+
+# Feeds
+excerpt_link: "Weiterlesen &arr;"
+excerpt_in_feed: false
+permalink_label: "Permalink"
+permalink_label_feed: "★ Permalink"
+linklog_marker: "→"
+linklog_marker_position: after
+linklog_marker_position_feed: after
+standard_post_marker:
+
+# Categories
+category_feeds: true
+category_dir: kategorie
+category_title_prefix: "Kategorie: "
+
+# Tags
+tag_feeds: true
+tag_dir: tag
+tag_title_prefix: "Tag: "
+
+# Pagination
+paginate:       1000       # Posts per page on the blog index
+paginate_path:  :num       # default path for pagination, eg. page/2/
+
+# Kramdown
+kramdown:
+  auto_ids:                  true
+  auto_id_prefix:            ""
+  auto_id_stripping:         true
+  transliterated_header_ids: true
+  footnote_nr:               1
+  entitiy_output:            as_char
+  toc_levels:                1..6
+  input:                     GFM # GitHub Flavored Markdown
+  smart_quotes:              sbquo,lsquo,bdquo,ldquo, # ‚‘ „“
+
+# Exclude files
+exclude: [
+  "vendor", "Gemfile", "Gemfile.lock", "README.markdown", "fonts",
+  "**.png", "**.jpg", "**.jpeg", "**.gif", "**.webp", "**.svg", "**.ico"
+]
+
+# Include files
+include: [
+  "favicon.ico"
+]
+
+# Sitemap.xml Generator
+sitemap:
+  file: "/sitemap.xml"
+  exclude:
+    - "/feed.xml"
+    - "/htaccess"
+    - "/htpasswd"
+  include_posts:
+    - "/index.html"
+  change_frequency_name: "change_frequency"
+  priority_name: "priority"
+
+# Lunr Search
+lunr_search:
+  excludes:
+    - feed.xml
+    - sitemap.xml
+    - /datenschutz/
+    - /faq/
+    - /impressum/
+    - /index.html
+  min_length: 3
+  stopwords: "stopwords.txt"

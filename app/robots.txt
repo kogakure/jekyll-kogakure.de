@@ -1,0 +1,25 @@
+---
+layout: none
+permalink: robots.txt
+---
+
+User-agent: *
+Disallow: /sprueche/
+Disallow: /error/
+
+User-agent: jobs.de-Robot
+Disallow: /
+
+User-agent: jasmin, neofonie search:heritrix 1.14.1_p2 (+http://spider.neofonie.de)
+Disallow: /
+
+User-agent: aiHitBot-DM/2.0.2 +http://www.aihit.com
+Disallow: /
+
+User-agent: Baiduspider+(+http://www.baidu.com/search/spider.htm)
+Disallow: /
+
+User-agent: HuaweiSymantecSpider/1.0+DSE-support@huaweisymantec.com+
+Disallow: /
+
+Sitemap: {{ site.url }}/sitemap.xml

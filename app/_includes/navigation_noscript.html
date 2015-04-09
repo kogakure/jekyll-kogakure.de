@@ -1,0 +1,11 @@
+<noscript>
+  <nav class="nav--noscript">
+    <ul class="nav--noscript__menu">
+      {% for navigation in site.data.navigation %}
+        <li class="nav--noscript__item">
+          <a href="{{ navigation.url }}" class="nav--noscript__link">{{ navigation.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</noscript>

@@ -1,0 +1,78 @@
+//====================================
+//  Aside
+//====================================
+
+.aside {
+  background: $greyish-green;
+  font-size: modular-scale(0);
+  line-height: 1.5;
+  margin-bottom: $default-spacing-bottom;
+  margin-top: $default-spacing-top;
+  padding: 1.5em;
+
+  p:last-child {
+    margin: 0;
+  }
+
+  @include breakpoint($grid-breakpoint-small) {
+    @include float-span(3, 4, 6, 1/3, 'isolation');
+    margin-left: gutter-span();
+    margin-top: 0;
+  }
+
+  @include breakpoint($grid-breakpoint-medium) {
+    @include float-span(5, 8, 12, 1/3, 'isolation');
+  }
+
+  @include breakpoint($grid-breakpoint-large) {
+    @include float-span(5, 10, 14, 1/3, 'isolation');
+  }
+
+  @include breakpoint($grid-breakpoint-xlarge) {
+    @include float-span(4, 7, 10, 1/3, 'isolation');
+  }
+}
+
+.aside__headline {
+  color: $white;
+}
+
+.aside--full {
+  clear: both;
+  width: 100%;
+}
+
+
+// Product recommendation
+.aside--recommendation {
+  background: $very-soft-green;
+  position: relative;
+  width: 100%;
+}
+
+.aside--recommendation__item {
+  @extend %clearfix;
+}
+
+.aside--recommendation__image {
+  float: left;
+  margin: 0 1em 0 0;
+}
+
+.aside--recommendation__title {
+  clear: none;
+  color: $very-dark-magenta;
+  font-size: modular-scale(0);
+
+  @include breakpoint($grid-breakpoint-small) {
+    font-size: modular-scale(1);
+  }
+}
+
+.aside--recommendation__contributors {
+  margin-bottom: 0.5em;
+}
+
+.aside--recommendation__link {
+  @extend %full-box-link;
+}

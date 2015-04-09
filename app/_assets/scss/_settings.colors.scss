@@ -1,0 +1,58 @@
+//====================================
+//  Colors
+//====================================
+
+$black:                       #000000;
+$white:                       #ffffff;
+
+$dark-moderate-green:         #7ca04d; // Main Headline
+$strong-green:                #b0bc04; // Subheadlines
+$greyish-green:               #bcce9f;
+$very-soft-green:             #d7dd8d;
+
+$very-dark-grey:              #666666;
+$very-dark-magenta:           #1a171b;
+$dimmed-grey:                 #cccccc;
+$light-grey:                  #dddddd;
+$very-light-grey:             #eeeeee;
+$mostly-white-grey:           #f7f7f7;
+
+$site-background:             $very-light-grey;
+$container-background:        $mostly-white-grey;
+
+// Links
+$link-color:                  $strong-green;
+$custom-underline-background: $mostly-white-grey;
+
+// Examples (samp)
+$sample-color:                $white;
+$sample-background:           $very-dark-magenta;
+
+// Keyboard (kbd)
+$keyboard-border:             $dimmed-grey;
+$keyboard-background:         $mostly-white-grey;
+
+// Tables
+$table-border-color:          $light-grey;
+$table-striped-background:    rgba($white, 0.8);
+
+// Images
+$image-border-color:          $dimmed-grey;
+
+// Categories
+$category-background:         $light-grey;
+
+// Pagination
+$pagination-background:       $light-grey;
+
+// Scrollbars
+$scroll-handle-color:         $strong-green;
+$scroll-handle-hover-color:   $black;
+
+// Flipboard
+$flipboard-color-info:               $very-light-grey;
+$flipboard-color-author:             $dimmed-grey;
+$flipboard-cover-background:         $very-dark-grey;
+$flipboard-button-background:        $strong-green;
+$flipboard-button-background-hover:  $strong-green;
+$flipboard-button-background-active: $dark-moderate-green;

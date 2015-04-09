@@ -1,0 +1,40 @@
+//====================================
+//  Quotes
+//====================================
+
+// Blockquote
+blockquote {
+  border-left: 5px solid $strong-green;
+  font-style: italic;
+  margin: $default-spacing-top $default-spacing-top $default-spacing-bottom 0.5em;
+  padding-left: 1em;
+
+  @include breakpoint($grid-breakpoint-small) {
+    margin-left: $default-spacing-left;
+  }
+}
+
+
+// Cite
+cite {
+  font-style: italic;
+}
+
+
+// Inline Quotes
+q {
+  font-style: italic;
+
+  &:before {
+    content: open-quote;
+  }
+
+  &:after {
+    content: close-quote;
+  }
+}
+
+@include q-quotes(de, '„' '“' '‚' '‘');
+@include q-quotes(en, '“' '”' '‘' '’');
+@include q-quotes(fr, '« ' ' »' '“' '”');
+@include q-quotes(ja, '「' '」' '『' '』');

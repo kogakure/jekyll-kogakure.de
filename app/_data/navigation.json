@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Startseite",
+    "url": "/"
+  },
+  {
+    "title": "Artikel",
+    "url": "/artikel/"
+  },
+  {
+    "title": "Lexikon",
+    "url": "/lexikon/"
+  },
+  {
+    "title": "Zitate",
+    "url": "/zitate/"
+  },
+  {
+    "title": "Kaufempfehlungen",
+    "url": "/kaufempfehlungen/"
+  },
+  {
+    "title": "Information",
+    "url": "/info/"
+  }
+]
