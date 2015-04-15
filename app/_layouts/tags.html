@@ -1,11 +1,18 @@
 ---
-layout: "archive"
+layout: "default"
+body_class: "page-categories"
 ---
 
-{% for post in site.tags[page.tag] %}
-<article>
-  {% include archive_post.html %}
-</article>
-{% endfor %}
+<h1>{% if page.title or post.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</h1>
 
 {% include tags_list.html %}
+
+<section class="article-list custom-underline">
+  <ul>
+    {% for post in site.tags[page.tag] %}
+      <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,3 +1,4 @@
-build/
+app/_assets/stylesheets/
 app/_bower_components/
+build/
 vendor/bundle/

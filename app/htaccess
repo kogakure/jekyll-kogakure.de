@@ -124,7 +124,10 @@ Redirect 301 /togakure.html                                  /artikel/togakure-r
 Redirect 301 /waffen.html                                    /artikel/waffen/
 Redirect 301 /archiv/                                        /artikel/
 Redirect 301 /inhalt/                                        /artikel/
+Redirect 301 /themen/                                        /kategorie/
+Redirect 301 /kontakt/                                       /info/
 
+RewriteRule ^lexikon/(.+)$                                   /lexikon/
 
 # ##############################################################################
 # # ERRORS                                                                     #
