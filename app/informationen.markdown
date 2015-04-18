@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Informationen"
-description: "Informationen über diese Seite"
+description: "Informationen über diese Seite, warum es sie gibt, was der Domain-Name bedeutet, wie ich kontaktiert werden kann und mit welchen Tools die Website erstellt wurde."
 permalink: "/info/"
 body_class: "page-information"
 content_class: "custom-underline"

@@ -1,8 +1,9 @@
 ---
 layout: page
 title: "Datenschutz"
-description: "Datenschutz-Hinweise"
+description: "Die Datenschutz-Hinweise für diese Website: Datenverarbeitung, Cookies, Auskunftsrecht und Webanalyse."
 permalink: "/datenschutz/"
+robots: "noindex,follow"
 ---
 
 Ich, der Betreiber des Online-Magazins kogakure.de, Stefan Imhoff, Walter-Heitmann-Str. 2, 22159 Hamburg nehme den Schutz Ihrer persönlichen Daten sehr ernst und halte mich strikt an die Regeln der Datenschutzgesetze. Es werden auf dieser Website *keine personenbezogenen Daten* erfasst oder gespeichert. Außerdem werden in keinem Fall erhobene Daten verkauft oder aus anderen Gründen an Dritte weitergegeben.

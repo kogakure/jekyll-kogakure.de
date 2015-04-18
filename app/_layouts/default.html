@@ -1,5 +1,5 @@
 {% capture page_url %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
-{% capture page_title %}{% if page.title %}{{ page.title | strip_html }} // {% endif %}{{ site.data.settings.title }}{% endcapture %}
+{% capture page_title %}{% if page.title %}{{ page.title | strip_html }} ✦ {% endif %}{{ site.data.settings.title }}{% endcapture %}
 {% capture page_description %}{% if page.description %}{{ page.description }}{% else if %}{{ page.excerpt }}{% else %}{{ content | strip_html | strip_newlines | condense_spaces | truncate:150 }}{% endif %}{% endcapture %}
 {% capture author %}{% if page.author %}{{ page.author }}{% else %}{{ site.data.settings.author }}{% endif %}{% endcapture %}
 {% capture keywords %}{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.data.settings.seo.keywords }}{% endif %}{% endcapture %}

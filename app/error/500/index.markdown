@@ -3,6 +3,7 @@ layout: error
 title: Serverfehler!
 error_page_500: true
 body_class: "page-error-500"
+robots: "noindex,follow"
 ---
 
 # Oh nein! Etwas ist wirklich schlimm kaputt!

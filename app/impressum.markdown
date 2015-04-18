@@ -1,8 +1,9 @@
 ---
 layout: page
 title: "Impressum"
-description: "Impressum dieser Seite"
+description: "Das Impressum dieser Seite, mit Kontaktinformationen, Haftungshinweis und Quellenangabe für verwendete Grafiken."
 permalink: "impressum/"
+robots: "noindex,follow"
 ---
 
 Stefan Imhoff

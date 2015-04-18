@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Fragen und Antworten"
-description: "Die häufigsten Fragen"
+description: "Die häufigsten Fragen und Antworten: Wo kann ich Bujinkan Budo Taijutsu trainieren? Was für Bücher kann ich lesen? Wo bekomme ich Ausrüstung? Was ist erlaubt, was verboten?"
 permalink: "/faq/"
 ---
 
