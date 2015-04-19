@@ -51,7 +51,6 @@ samp {
 
 // Keyboard entry
 kbd {
-  @extend %base-font;
   background-color: $keyboard-background;
   border: 1px solid $keyboard-border;
   border-radius: 3px;

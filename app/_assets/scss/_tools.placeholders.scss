@@ -17,6 +17,10 @@
   font-family: $base-font-family;
 }
 
+%base-font-wf {
+  font-family: $base-font-family-wf;
+}
+
 %mono-font {
   font-family: Menlo, Monaco, 'Andale Mono', 'Lucida console', 'Courier New', monospace;
 }

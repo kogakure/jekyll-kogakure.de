@@ -39,6 +39,10 @@ body {
   hyphens: auto;
   line-height: $base-line-height;
   overflow-x: hidden;
+
+  .wf-active & {
+    @extend %base-font-wf;
+  }
 }
 
 .wrapper {

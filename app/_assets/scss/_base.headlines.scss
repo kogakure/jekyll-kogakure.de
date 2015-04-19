@@ -9,7 +9,6 @@ h4,
 h5,
 h6,
 table caption {
-  @extend %base-font;
   @include enable-ligatures;
   clear: both;
   color: $strong-green;
