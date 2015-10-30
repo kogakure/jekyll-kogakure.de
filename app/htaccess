@@ -51,6 +51,9 @@ Redirect Gone /kurzmeldungen/teenage-mutant-ninja-turtles/
 Redirect Gone /kurzmeldungen/togakure-ryuu-3d-film/
 Redirect Gone /kurzmeldungen/umzug-zu-mt-erfolgreich/
 Redirect Gone /kurzmeldungen/wechsel-des-hosters/
+Redirect Gone /kurzmeldungen/togakure-ryu-taijutsu-no-kata-bujinkan-budo-densho/
+Redirect Gone /kurzmeldungen/neue-buecher-herbst-2011-tengu-publishing/
+Redirect Gone /service/journal/archiv/2005/01/17/planetopia-jamba-und-sonstige-deppen/
 
 # Redirects (Permanent)
 Redirect 301 /a.html /lexikon/
@@ -347,6 +350,9 @@ AddDefaultCharset utf-8
 # ------------------------------------------------------------------------------
 
 # mod_pagespeed
+ModPagespeed On
+ModPagespeedDisableFilters rewrite_css
+
 <IfModule mod_pagespeed.c>
   SetOutputFilter MOD_PAGESPEED_OUTPUT_FILTER
 </IfModule>

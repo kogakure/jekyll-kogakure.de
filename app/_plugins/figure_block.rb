@@ -57,7 +57,7 @@ module Jekyll
       source += content
 
       if @caption
-        source += "<figcaption class=\"image-figure__caption\">#{@caption}</figcaption>\n"
+        source += "<figcaption class=\"image-figure-caption\">#{@caption}</figcaption>\n"
       else
         source += ""
       end

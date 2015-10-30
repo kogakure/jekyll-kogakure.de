@@ -191,7 +191,7 @@ ERR
       dir = @context.registers[:site].config['category_dir']
       url = slug.to_url
       url = "#{dir}/#{url}" unless dir.nil? or dir.empty?
-      "<a class=\"categories__link\" href=\"/#{url}/\">#{title}</a>"
+      "<a class=\"categories-link\" href=\"/#{url}/\">#{title}</a>"
     end
 
     # Outputs the post.date as formatted html, with hooks for CSS styling.

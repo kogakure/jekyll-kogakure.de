@@ -2,7 +2,7 @@
 // Dictionary
 //====================================
 
-.dictionary__japanese {
+.dictionary-japanese {
   @extend %japanese-font;
   font-size: modular-scale(4);
   line-height: 1.2;
@@ -21,7 +21,7 @@
   }
 }
 
-.dictionary__romanji {
+.dictionary-romanji {
   @include enable-ligatures;
   color: $strong-green;
   font-size: modular-scale(4);
@@ -37,7 +37,7 @@
   }
 }
 
-.dictionary__description {
+.dictionary-description {
   border-bottom: 1px solid rgba($very-dark-magenta, 0.1);
   clear: both;
   margin-bottom: $default-spacing-bottom;

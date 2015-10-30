@@ -20,7 +20,7 @@
 #
 # {% pullquote left %} will create a left-aligned pullquote instead.
 #
-# Note: this plugin now creates pullquotes with the class of pullquote--right by default
+# Note: this plugin now creates pullquotes with the class of pullquote-right by default
 require "RubyPants"
 
 module Jekyll
@@ -35,7 +35,7 @@ module Jekyll
       output = super
       if output =~ /\{"\s*(.+?)\s*"\}/m
         @quote = RubyPants.new($1).to_html
-        "<span class='pullquote--#{@align}' data-pullquote='#{@quote}'>#{output.gsub(/\{"\s*|\s*"\}/, '')}</span>"
+        "<span class='pullquote-#{@align}' data-pullquote='#{@quote}'>#{output.gsub(/\{"\s*|\s*"\}/, '')}</span>"
       else
         return "Surround your pullquote like this {\" text to be quoted \"}"
       end

@@ -1,12 +1,12 @@
 //====================================
-//  Categories
+//  Category
 //====================================
 
 .classification {
   display: inline-block;
 }
 
-.categories__link {
+.categories-link {
   @include link-colors($black, $white);
   background: $category-background;
   border-radius: 2px;
@@ -23,8 +23,8 @@
 
 
 // Listen-Items laufen inline
-.categories--inline {
-  .categories__item {
+.categories-inline {
+  .categories-item {
     display: inline;
   }
 }

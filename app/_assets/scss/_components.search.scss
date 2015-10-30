@@ -13,7 +13,7 @@
   }
 }
 
-.search__input {
+.search-input {
   background: rgba($white, 0.6);
   border: 0;
   font-size: modular-scale(1);
@@ -37,14 +37,14 @@
 }
 
 .search-results {
-  &.search-results--open {
+  &.search-results-open {
     @extend %clearfix;
     opacity: 1;
     transition: all 150ms ease-out;
   }
 }
 
-.search-results--open {
+.search-results-open {
   background: $white;
   border: 3px double $greyish-green;
   margin-top: $default-spacing-top;
@@ -52,16 +52,16 @@
   text-align: center;
 }
 
-.search-results__headline {
+.search-results-headline {
   font-size: modular-scale(1);
 }
 
-.search-results__entries {
+.search-results-entries {
   p {
     margin-bottom: 0;
   }
 }
 
-.search-results__no-entries {
+.search-results-no-entries {
   font-size: modular-scale(0);
 }

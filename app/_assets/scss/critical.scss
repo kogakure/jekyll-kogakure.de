@@ -1,6 +1,6 @@
-//------------------------------------
+//====================================
 // Critical Stylesheet
-//------------------------------------
+//====================================
 //
 // These styles will be loaded on EVERY page as inline stylesheet.
 // So be sure to include only the absolute basics which can be seen
@@ -9,31 +9,31 @@
 // Helpers
 @import "vendor.meyer-reset";
 
-@import "settings.imports";
-@import "settings.colors";
-@import "settings.media-queries";
-@import "settings.dimensions";
+@import "settings.import";
+@import "settings.color";
+@import "settings.media-query";
+@import "settings.dimension";
 @import "settings.typography";
 
-@import "tools.mixins";
-@import "tools.placeholders";
+@import "tools.mixin";
+@import "tools.placeholder";
 
 // Base
-@import "base.grids";
+@import "base.grid";
 @import "base.page";
 @import "base.header";
 @import "base.logo";
-@import "base.headlines";
-@import "base.links";
+@import "base.headline";
+@import "base.link";
 @import "base.text";
 @import "base.code";
-@import "base.quotes";
-@import "base.lists";
-@import "base.images";
+@import "base.quote";
+@import "base.list";
+@import "base.image";
 
 // Modules
 @import "components.article";
-@import "components.categories";
+@import "components.category";
 @import "components.container";
 @import "components.custom-underline";
 @import "components.dictionary";
@@ -41,12 +41,12 @@
 @import "components.flipboard";
 @import "components.navigation";
 @import "components.overlay";
-@import "components.quotes";
+@import "components.quote";
 @import "components.recommendation";
 @import "components.table";
 
 // States
-@import "states";
+@import "state";
 
 // Debugging
 @import "tools.debug";

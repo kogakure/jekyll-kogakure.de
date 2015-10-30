@@ -8,28 +8,28 @@ body_class: "fullsize-grid page-book-recommendations"
 
 <ul class="books recommendation">
   {% for book in site.data.products.books %}
-    <li class="recommendation__item">
-      <figure class="recommendation__layer" itemscope itemtype="http://schema.org/Book">
-        <img class="recommendation__image" width="300" src="/assets/images/{{ book.cover }}" alt="{{ book.title }}" itemprop="image">
-        <figcaption class="recommendation__info">
-          <h2 class="recommendation__info__title" itemprop="name">{{ book.title | truncate:"150" }}</h2>
-          <p class="recommendation__info__contributors">
+    <li class="recommendation-item">
+      <figure class="recommendation-layer" itemscope itemtype="http://schema.org/Book">
+        <img class="recommendation-image" width="300" src="/assets/images/{{ book.cover }}" alt="{{ book.title }}" itemprop="image">
+        <figcaption class="recommendation-info">
+          <h2 class="recommendation-info-title" itemprop="name">{{ book.title | truncate:"150" }}</h2>
+          <p class="recommendation-info-contributors">
             <i>von</i>
             {% for contributor in book.contributors %}
               <span itemprop="author">{{ contributor.name }}</span> ({{ contributor.role }}){% unless forloop.last %}, {% endunless %}
             {% endfor %}
           </p>
-          <dl class="recommendation__info__details">
-            <dt class="recommendation__info__details__title">Seiten</dt>
-            <dd class="recommendation__info__details__definition" itemprop="numberOfPages">{{ book.pages }}</dd>
-            <dt class="recommendation__info__details__title">Sprache</dt>
-            <dd class="recommendation__info__details__definition" itemprop="inLanguage">{{ book.language }}</dd>
+          <dl class="recommendation-info-details">
+            <dt class="recommendation-info-details-title">Seiten</dt>
+            <dd class="recommendation-info-details-definition" itemprop="numberOfPages">{{ book.pages }}</dd>
+            <dt class="recommendation-info-details-title">Sprache</dt>
+            <dd class="recommendation-info-details-definition" itemprop="inLanguage">{{ book.language }}</dd>
           </dl>
-          <a class="recommendation__link" href="http://www.amazon.de/gp/product/{{ book.asin }}?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN={{ book.asin }}"target="_blank">Kaufen</a>
+          <a class="recommendation-link" href="http://www.amazon.de/gp/product/{{ book.asin }}?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN={{ book.asin }}"target="_blank">Kaufen</a>
         </figcaption>
       </figure>
       {% if book.new == true %}
-      <div class="recommendation__new">Neu</div>
+      <div class="recommendation-new">Neu</div>
       {% endif %}
     </li>
   {% endfor %}

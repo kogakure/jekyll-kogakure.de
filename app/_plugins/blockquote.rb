@@ -10,9 +10,9 @@
 #   ...
 #   <blockquote class="quote">
 #     <p>Wheeee!</p>
-#     <footer class="quote__footer">
-#     <strong class="quote__author">Bobby Willis</strong>
-#     <cite class="quote__cite">
+#     <footer class="quote-footer">
+#     <strong class="quote-author">Bobby Willis</strong>
+#     <cite class="quote-cite">
 #       <a href="http://google.com/search?q=pants">The Search For Bobby's Pants</a>
 #     </cite>
 #   </blockquote>
@@ -48,7 +48,7 @@ module Jekyll
 
     def render(context)
       quote = paragraphize(super)
-      author = "<strong class=\"quote__author\">#{@by.strip}</strong>" if @by
+      author = "<strong class=\"quote-author\">#{@by.strip}</strong>" if @by
       if @source
         url = @source.match(/https?:\/\/(.+)/)[1].split('/')
         parts = []
@@ -61,16 +61,16 @@ module Jekyll
         source << '/&hellip;' unless source == @source
       end
       if !@source.nil?
-        cite = ", <cite class=\"quote__cite\"><a href='#{@source}'>#{(@title || source)}</a></cite>"
+        cite = ", <cite class=\"quote-cite\"><a href='#{@source}'>#{(@title || source)}</a></cite>"
       elsif !@title.nil?
-        cite = ", <cite class=\"quote__cite\">#{@title}</cite>"
+        cite = ", <cite class=\"quote-cite\">#{@title}</cite>"
       end
       blockquote = if @by.nil?
         quote
       elsif cite
-        "#{quote}<footer class=\"quote__footer\">#{author + cite}</footer>"
+        "#{quote}<footer class=\"quote-footer\">#{author + cite}</footer>"
       else
-        "#{quote}<footer class=\"quote__footer\">#{author}</footer>"
+        "#{quote}<footer class=\"quote-footer\">#{author}</footer>"
       end
       "<blockquote class=\"quote\">#{blockquote}</blockquote>"
     end

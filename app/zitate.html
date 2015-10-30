@@ -11,8 +11,8 @@ body_class: "page-quotes"
 {% for quote in site.data.quotes %}
   <blockquote class="quote">
     <p>{{ quote.text | newline_to_br }}</p>
-    <footer class="quote__footer">
-      {% if quote.author %}<strong class="quote__author">{{ quote.author }}</strong>{% if quote.cite %},{% endif %} <cite class="quote__cite">{{ quote.cite }}</cite>{% endif %}
+    <footer class="quote-footer">
+      {% if quote.author %}<strong class="quote-author">{{ quote.author }}</strong>{% if quote.cite %},{% endif %} <cite class="quote-cite">{{ quote.cite }}</cite>{% endif %}
     </footer>
   </blockquote>
 {% endfor %}

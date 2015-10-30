@@ -4,7 +4,7 @@ var container       = document.querySelector('div.container'),
     url             = window.location.href,
     overlay         = document.querySelector('div.overlay'),
     triggerBttn     = document.querySelector('.nav-btn'),
-    navigationLinks = '.nav__link',
+    navigationLinks = '.nav-link',
     INVISIBLE       = 'invisible',
     transEndEventNames = {
       'WebkitTransition': 'webkitTransitionEnd',
@@ -25,10 +25,10 @@ module.exports = {
   toggleOverlay: function(event) {
     event.preventDefault();
 
-    if (classie.has(overlay, 'overlay--open')) {
-      classie.remove(overlay, 'overlay--open');
-      classie.remove(container, 'container--overlay');
-      classie.add(overlay, 'overlay--close');
+    if (classie.has(overlay, 'overlay-open')) {
+      classie.remove(overlay, 'overlay-open');
+      classie.remove(container, 'container-overlay');
+      classie.add(overlay, 'overlay-close');
 
       var onEndTransitionFn = function(ev) {
         if (support.transitions) {
@@ -37,7 +37,7 @@ module.exports = {
         }
 
         classie.remove(triggerBttn, 'hidden');
-        classie.remove(overlay, 'overlay--close');
+        classie.remove(overlay, 'overlay-close');
       };
 
       if (support.transitions) {
@@ -45,10 +45,10 @@ module.exports = {
       } else {
         onEndTransitionFn();
       }
-    } else if(!classie.has(overlay, 'overlay--close')) {
+    } else if(!classie.has(overlay, 'overlay-close')) {
       classie.add(triggerBttn, 'hidden');
-      classie.add(overlay, 'overlay--open');
-      classie.add(container, 'container--overlay');
+      classie.add(overlay, 'overlay-open');
+      classie.add(container, 'container-overlay');
     }
   },
 

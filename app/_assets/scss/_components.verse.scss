@@ -10,14 +10,14 @@
   padding: 0;
 }
 
-.verse__box {
+.verse-box {
   font-family: inherit;
   margin: $default-spacing;
   overflow-x: auto;
   padding: 1.5em 0;
 }
 
-.verse__author {
+.verse-author {
   &:before {
     @include breakpoint($grid-breakpoint-medium) {
       content: '–';
@@ -27,7 +27,7 @@
   }
 }
 
-.verse__box p {
+.verse-box p {
   border: 0;
   padding: 0;
 }

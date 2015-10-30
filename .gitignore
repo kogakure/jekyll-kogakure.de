@@ -5,3 +5,4 @@ app/_bower_components/
 build
 node_modules/
 vendor/bundle/
+app/_includes/critical/critical.css

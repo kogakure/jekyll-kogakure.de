@@ -13,16 +13,16 @@
 #   {% endverse %}
 #   ...
 #   <blockquote class="verse">
-#   <pre class="verse__box">
+#   <pre class="verse-box">
 #     <p>
 #       ‘Twas brillig, and the slithy toves<br>
 #       Did gyre and gimble            in the wabe;<br>
 #       All mimsy     were     the borogoves,<br>
 #       And       the mome     raths            outgrabe.
 #     </p>
-#     <footer class="verse__footer">
-#      <strong class="verse__author">Lewis Carroll</strong>
-#      <cite class="verse__cite">Jabberwocky (1832-98)</cite>
+#     <footer class="verse-footer">
+#      <strong class="verse-author">Lewis Carroll</strong>
+#      <cite class="verse-cite">Jabberwocky (1832-98)</cite>
 #     </footer>
 #   </pre>
 #   </blockquote>
@@ -58,7 +58,7 @@ module Jekyll
 
     def render(context)
       quote = paragraphize(super)
-      author = "<strong class=\"verse__author\">#{@by.strip}</strong>" if @by
+      author = "<strong class=\"verse-author\">#{@by.strip}</strong>" if @by
       if @source
         url = @source.match(/https?:\/\/(.+)/)[1].split('/')
         parts = []
@@ -71,18 +71,18 @@ module Jekyll
         source << '/&hellip;' unless source == @source
       end
       if !@source.nil?
-        cite = " <cite class=\"verse__cite\"><a href='#{@source}'>#{(@title || source)}</a></cite>"
+        cite = " <cite class=\"verse-cite\"><a href='#{@source}'>#{(@title || source)}</a></cite>"
       elsif !@title.nil?
-        cite = ", <cite class=\"verse__cite\">#{@title}</cite>"
+        cite = ", <cite class=\"verse-cite\">#{@title}</cite>"
       end
       blockquote = if @by.nil?
         quote
       elsif cite
-        "#{quote}<footer class=\"cite__footer\">#{author + cite}</footer>"
+        "#{quote}<footer class=\"cite-footer\">#{author + cite}</footer>"
       else
-        "#{quote}<footer class=\"cite__footer\">#{author}</footer>"
+        "#{quote}<footer class=\"cite-footer\">#{author}</footer>"
       end
-      "<blockquote class=\"verse\"><pre class=\"verse__box\">#{blockquote}</pre></blockquote>"
+      "<blockquote class=\"verse\"><pre class=\"verse-box\">#{blockquote}</pre></blockquote>"
     end
 
     def paragraphize(input)

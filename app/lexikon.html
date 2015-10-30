@@ -12,9 +12,9 @@ body_class: "fullsize-grid page-dictionary"
   {% assign sorted_dictionary = site.data.dictionary | sort:"sort" %}
   {% for entry in sorted_dictionary %}
     {% if entry.japanese %}
-    <dt class="dictionary__japanese">{{ entry.japanese }}</dt>
+    <dt class="dictionary-japanese">{{ entry.japanese }}</dt>
     {% endif %}
-    <dd class="dictionary__romanji">{{ entry.title }}</dd>
-    <dd class="dictionary__description">{{ entry.description | newline_to_br }}</dd>
+    <dd class="dictionary-romanji">{{ entry.title }}</dd>
+    <dd class="dictionary-description">{{ entry.description | newline_to_br }}</dd>
   {% endfor %}
 </dl>

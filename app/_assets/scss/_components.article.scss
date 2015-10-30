@@ -2,23 +2,23 @@
 //  Article
 //====================================
 
-.article__title,
-.article__meta {
+.article-title,
+.article-meta {
   @include breakpoint($grid-breakpoint-xlarge) {
     text-align: center;
   }
 }
 
-.article__meta {
+.article-meta {
   font-size: 14px;
   margin-bottom: 3em;
 }
 
-.article__author {
+.article-author {
   display: inline-block;
   font-weight: bold;
 }
 
-.article__author__byline {
+.article-author-byline {
   font-weight: normal;
 }

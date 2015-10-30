@@ -1,13 +1,13 @@
 {% unless site.related_posts == empty %}
   <section class="article-related custom-underline">
     {% if page.language == "en" %}
-    <h3 class="article-releated__headline">Related Articles</h3>
+    <h3 class="article-releated-headline">Related Articles</h3>
     {% else %}
-    <h3 class="article-releated__headline">Ähnliche Beiträge</h3>
+    <h3 class="article-releated-headline">Ähnliche Beiträge</h3>
     {% endif %}
-    <ul class="article-related__list">
+    <ul class="article-related-list">
       {% for post in site.related_posts limit:5 %}
-      <li class="article-related__item">
+      <li class="article-related-item">
         <a href="{{ root_url }}{{ post.url }}">{{ post.title | ampersand }}</a>
       </li>
       {% endfor %}

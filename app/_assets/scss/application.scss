@@ -1,26 +1,26 @@
-//------------------------------------
+//====================================
 //  Application Stylesheet
-//------------------------------------
+//====================================
 
-@import "settings.imports";
-@import "settings.colors";
-@import "settings.media-queries";
-@import "settings.dimensions";
+@import "settings.import";
+@import "settings.color";
+@import "settings.media-query";
+@import "settings.dimension";
 @import "settings.typography";
 
-@import "tools.mixins";
-@import "tools.placeholders";
+@import "tools.mixin";
+@import "tools.placeholder";
 
 // Base
 @import "base.footer";
-@import "base.videos";
+@import "base.video";
 
-// Modules
+// Components
 @import "components.aside";
 @import "components.code-highlight";
-@import "components.figures";
-@import "components.footnotes";
-@import "components.images";
+@import "components.figure";
+@import "components.footnote";
+@import "components.image";
 @import "components.pagination";
 @import "components.pullquote";
 @import "components.scrollbar";

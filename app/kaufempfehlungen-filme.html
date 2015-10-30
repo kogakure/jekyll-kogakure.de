@@ -8,28 +8,28 @@ body_class: "fullsize-grid page-movie-recommendations"
 
 <ul class="movies recommendation">
   {% for movie in site.data.products.movies %}
-    <li class="recommendation__item">
-      <figure class="recommendation__layer" itemscope itemtype="http://schema.org/Movie">
-        <img class="recommendation__image" width="300" src="/assets/images/{{ movie.cover }}" itemprop="image">
-        <figcaption class="recommendation__info">
-          <h2 class="recommendation__info__title" itemprop="name">{{ movie.title | truncate:"150" }}</h2>
-          <dl class="recommendation__info__details">
-            <dt class="recommendation__info__details__title">Regisseur</dt>
-            <dd class="recommendation__info__details__definition" itemprop="director"><span itemprop="name">{{ movie.director }}</span></dd>
-            <dt class="recommendation__info__details__title">Veröffentlichung</dt>
-            <dd class="recommendation__info__details__definition" itemprop="datePublished">{{ movie.year }}</dd>
-            <dt class="recommendation__info__details__title">Dauer</dt>
-            <dd class="recommendation__info__details__definition" itemprop="duration">{{ movie.duration }}</dd>
-            <dt class="recommendation__info__details__title">Genre</dt>
-            <dd class="recommendation__info__details__definition" itemprop="genre">{{ movie.genres | join: ", " }}</dd>
-            <dt class="recommendation__info__details__title">Freigegeben ab</dt>
-            <dd class="recommendation__info__details__definition" itemprop="contentRating">{{ movie.rating }}</dd>
+    <li class="recommendation-item">
+      <figure class="recommendation-layer" itemscope itemtype="http://schema.org/Movie">
+        <img class="recommendation-image" width="300" src="/assets/images/{{ movie.cover }}" itemprop="image">
+        <figcaption class="recommendation-info">
+          <h2 class="recommendation-info-title" itemprop="name">{{ movie.title | truncate:"150" }}</h2>
+          <dl class="recommendation-info-details">
+            <dt class="recommendation-info-details-title">Regisseur</dt>
+            <dd class="recommendation-info-details-definition" itemprop="director"><span itemprop="name">{{ movie.director }}</span></dd>
+            <dt class="recommendation-info-details-title">Veröffentlichung</dt>
+            <dd class="recommendation-info-details-definition" itemprop="datePublished">{{ movie.year }}</dd>
+            <dt class="recommendation-info-details-title">Dauer</dt>
+            <dd class="recommendation-info-details-definition" itemprop="duration">{{ movie.duration }}</dd>
+            <dt class="recommendation-info-details-title">Genre</dt>
+            <dd class="recommendation-info-details-definition" itemprop="genre">{{ movie.genres | join: ", " }}</dd>
+            <dt class="recommendation-info-details-title">Freigegeben ab</dt>
+            <dd class="recommendation-info-details-definition" itemprop="contentRating">{{ movie.rating }}</dd>
           </dl>
-          <a class="recommendation__link" href="http://www.amazon.de/gp/product/{{ movie.asin }}?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN={{ movie.asin }}" target="_blank">Kaufen</a>
+          <a class="recommendation-link" href="http://www.amazon.de/gp/product/{{ movie.asin }}?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN={{ movie.asin }}" target="_blank">Kaufen</a>
         </figcaption>
       </figure>
       {% if movie.new == true %}
-      <div class="recommendation__new">Neu</div>
+      <div class="recommendation-new">Neu</div>
       {% endif %}
     </li>
   {% endfor %}

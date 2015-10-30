@@ -1,18 +1,18 @@
 <div id="search">
   <form action="/suche" method="get">
-    <input type="text" id="search-query" class="search__input" name="q" placeholder="Suchen" autocomplete="off">
+    <input type="text" id="search-query" class="search-input" name="q" placeholder="Suchen" autocomplete="off">
   </form>
 </div>
 
 <section id="search-results" class="search-results">
-  <div class="search-results__entries custom-underline"></div>
+  <div class="search-results-entries custom-underline"></div>
 </section>
 
 {% raw %}
 <script id="search-results-template" type="text/mustache">
   {{#entries}}
     <article>
-      <h4 class="search-results__headline">
+      <h4 class="search-results-headline">
         <a href="{{url}}">{{title}}</a>
       </h4>
     </article>

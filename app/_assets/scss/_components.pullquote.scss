@@ -1,6 +1,6 @@
-//====================================----
+//====================================
 //  Pullquote
-//====================================----
+//====================================
 
 %pullquote {
   font-size: modular-scale(2);
@@ -41,8 +41,8 @@
 }
 
 // Left/right aligned pullquotes
-.pullquote--right:before,
-.pullquote--left:before {
+.pullquote-right:before,
+.pullquote-left:before {
   @extend %pullquote;
   border: 0;
   content: attr(data-pullquote);
@@ -72,7 +72,7 @@
   }
 }
 
-.pullquote--left:before {
+.pullquote-left:before {
   @include breakpoint($grid-breakpoint-small) {
     float: left;
     width: column-span(3, 4, 6);

@@ -1,9 +1,9 @@
 //====================================
-//  Recommendations
+//  Recommendation
 //====================================
 
 // Image gallery created by MosaicFlow.
-// Elements will be put into columns (.gallery__column)
+// Elements will be put into columns (.gallery-column)
 // created by JavaScript
 
 .recommendation {
@@ -15,26 +15,26 @@
   margin-right: 0;
 }
 
-.recommendation--latest {
-  .recommendation__item {
+.recommendation-latest {
+  .recommendation-item {
     margin: 0 10px 10px 0;
   }
 }
 
-.recommendation__column {
+.recommendation-column {
   float: left;
 
-  .recommendation__image {
+  .recommendation-image {
     width: 100%;
   }
 }
 
-.recommendation__item {
+.recommendation-item {
   margin: 0 10px 10px 0;
   position: relative;
 }
 
-.recommendation__layer {
+.recommendation-layer {
   cursor: pointer;
   margin: 0;
   overflow: hidden;
@@ -44,36 +44,36 @@
   &:hover {
     background: $black;
 
-    .recommendation__info {
+    .recommendation-info {
       &::before {
         opacity: 1;
         transform: scale(1);
       }
     }
 
-    .recommendation__image {
+    .recommendation-image {
       opacity: 0.3;
       transform: scale(1.15);
     }
 
-    .recommendation__info__title {
+    .recommendation-info-title {
       opacity: 1;
       transform: translate3d(0, 0, 0);
     }
 
-    .recommendation__info__contributors,
-    .recommendation__info__details {
+    .recommendation-info-contributors,
+    .recommendation-info-details {
       opacity: 1;
       transform: translate3d(0, 0, 0) scale(1);
     }
   }
 
-  .recommendation__column & {
+  .recommendation-column & {
     width: auto;
   }
 }
 
-.recommendation__link {
+.recommendation-link {
   font-size: 0;
   height: 100%;
   left: 0;
@@ -94,13 +94,13 @@
   }
 }
 
-.recommendation__image {
+.recommendation-image {
   display: block;
   height: auto;
   width: auto;
 }
 
-.recommendation__info {
+.recommendation-info {
   backface-visibility: hidden;
   color: $white;
   font-size: 90%;
@@ -126,7 +126,7 @@
   }
 }
 
-.recommendation__info__title {
+.recommendation-info-title {
   color: $strong-green;
   font-size: modular-scale(1);
   margin: 0;
@@ -135,8 +135,8 @@
   transition: opacity 0.35s, transform 0.35s;
 }
 
-.recommendation__info__contributors,
-.recommendation__info__details {
+.recommendation-info-contributors,
+.recommendation-info-details {
   font-size: 70%;
   letter-spacing: 1px;
   line-height: 1.5;
@@ -146,12 +146,12 @@
   transition: opacity 0.35s, transform 0.35s;
 }
 
-.recommendation__info__details__title,
-.recommendation__info__details__definition {
+.recommendation-info-details-title,
+.recommendation-info-details-definition {
   display: inline;
 }
 
-.recommendation__info__details__title {
+.recommendation-info-details-title {
   color: $dark-moderate-green;
 
   &:before {
@@ -165,7 +165,7 @@
   }
 }
 
-.recommendation__new {
+.recommendation-new {
   background: $white;
   border-radius: $default-border-radius;
   bottom: 1.5em;
@@ -187,7 +187,7 @@
   position: relative;
 }
 
-.recommendations__link {
+.recommendations-link {
   bottom: 1em;
   color: $very-dark-magenta;
   font-size: modular-scale(0);
@@ -199,7 +199,7 @@
   }
 }
 
-.recommendation--homepage {
+.recommendation-homepage {
   align-items: center;
   display: flex;
   flex-flow: row wrap;
@@ -208,7 +208,7 @@
   padding: 0.5em;
 }
 
-.recommendation--homepage__item {
+.recommendation-homepage-item {
   flex-basis: 100%;
   flex-grow: 1;
   flex-shrink: 1;
@@ -232,14 +232,14 @@
   }
 }
 
-.recommendation--homepage__link {
+.recommendation-homepage-link {
   background: $black;
   display: inline-block;
   margin: 0.5em 0;
   padding: 0;
 }
 
-.recommendation--homepage__image {
+.recommendation-homepage-image {
   border: 1px solid rgba($black, 0.5);
   box-shadow: 0 1px 2px rgba($black, 0.5);
   display: block;

@@ -13,6 +13,6 @@ gulp.task('build', function(callback) {
     'images'
   ],
   'base64',
-  'combine:mediaqueries',
+  // 'combine:mediaqueries',
   callback);
 });

@@ -1,5 +1,5 @@
 //====================================
-//  Tables
+//  Table
 //====================================
 
 %table {
@@ -102,7 +102,7 @@ table {
 
 
 // Zebra tables
-.table--striped {
+.table-striped {
   @extend %table;
 
   tbody > tr:nth-child(odd) > td,
@@ -112,7 +112,7 @@ table {
 }
 
 // Bordered tables
-.table--bordered {
+.table-bordered {
   @extend %table;
   border: 1px solid $table-border-color;
   border-collapse: separate;
@@ -126,7 +126,7 @@ table {
 }
 
 // Tables with hover
-.table--hover {
+.table-hover {
   @extend %table;
 
   tbody tr:hover > td,

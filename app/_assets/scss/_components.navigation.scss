@@ -21,7 +21,7 @@
   }
 }
 
-.nav__menu {
+.nav-menu {
   display: inline-block;
   height: 100%;
   list-style: none;
@@ -30,7 +30,7 @@
   position: relative;
 }
 
-.nav__item {
+.nav-item {
   backface-visibility: hidden;
   display: block;
   height: 100% / $main-navigation-count;
@@ -45,7 +45,7 @@
   }
 }
 
-.nav__link {
+.nav-link {
   color: $strong-green;
   display: block;
   font-weight: $weight-bold;
@@ -80,17 +80,17 @@
 
 
 // Fallback navigation for clients without JavaScript
-.nav--noscript {
+.nav-noscript {
   background: rgba($black, 0.4);
   text-align: center;
 }
 
-.nav--noscript__item {
+.nav-noscript-item {
   display: inline-block;
   margin: 5px 10px;
 }
 
-.nav--noscript__link {
+.nav-noscript-link {
   @include link-colors($white, $strong-green);
   text-decoration: none;
 }

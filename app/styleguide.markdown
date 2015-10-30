@@ -279,7 +279,7 @@ And       the mome     raths            outgrabe.
 ## Randbemerkungen
 
 {% aside %}
-<h4 class="aside__headline">Überschrift</h4>
+<h4 class="aside-headline">Überschrift</h4>
 <p>Dies ist eine Randbemerkung.</p>
 {% endaside %}
 
@@ -287,7 +287,7 @@ Manchmal möchte man mitten im Text etwas erklären, was nicht direkt zum Text g
 
 {% highlight html %}
 {% raw %}{% aside %}
-<h4 class="aside__headline">Überschrift</h4>
+<h4 class="aside-headline">Überschrift</h4>
 <p>Dies ist eine Randbemerkung.</p>
 {% endaside %}{% endraw %}
 {% endhighlight %}
@@ -625,7 +625,7 @@ Content Cell  | Content Cell
 
 ### Gestreifte Tabellen
 
-<table class="table--striped">
+<table class="table-striped">
   <thead>
     <tr>
       <th>#</th>
@@ -657,7 +657,7 @@ Content Cell  | Content Cell
 </table>
 
 {% highlight html %}
-<table class="table--striped">
+<table class="table-striped">
 …
 </table>
 {% endhighlight %}
@@ -665,7 +665,7 @@ Content Cell  | Content Cell
 
 ### Tabellen mit Rand
 
-<table class="table--bordered">
+<table class="table-bordered">
   <thead>
     <tr>
       <th>#</th>
@@ -697,7 +697,7 @@ Content Cell  | Content Cell
 </table>
 
 {% highlight html %}
-<table class="table--bordered">
+<table class="table-bordered">
 …
 </table>
 {% endhighlight %}
@@ -705,7 +705,7 @@ Content Cell  | Content Cell
 
 ### Tabellen mit Hover-Interaktion
 
-<table class="table--hover">
+<table class="table-hover">
   <thead>
     <tr>
       <th>#</th>
@@ -737,7 +737,7 @@ Content Cell  | Content Cell
 </table>
 
 {% highlight html %}
-<table class="table--hover">
+<table class="table-hover">
 …
 </table>
 {% endhighlight %}
@@ -768,36 +768,36 @@ Ein einfaches Bild:
 
 ### Abbildung mit erzwungender Umrandung
 
-{% figure image-figure--border %}
+{% figure image-figure-border %}
   <img src="http://lorempixel.com/680/408/nature/" alt="Example image">
 {% endfigure %}
 
 {% highlight html %}
-{% raw %}{% figure image-figure--border %}
+{% raw %}{% figure image-figure-border %}
   <img src="http://lorempixel.com/680/408/nature/" alt="Example image">
 {% endfigure %}{% endraw %}
 {% endhighlight %}
 
 ### Abbildung mit entfernter Umrandung
 
-{% figure image-figure--noborder %}
+{% figure image-figure-noborder %}
   <img src="http://lorempixel.com/680/408/food/" alt="Example image">
 {% endfigure %}
 
 {% highlight html %}
-{% raw %}{% figure image-figure--noborder %}
+{% raw %}{% figure image-figure-noborder %}
   <img src="http://lorempixel.com/680/408/food/" alt="Example image">
 {% endfigure %}{% endraw %}
 {% endhighlight %}
 
 ### Abbildung mit Schatten
 
-{% figure image-figure--shadow %}
+{% figure image-figure-shadow %}
   <img src="http://lorempixel.com/680/408/animals/" alt="Example image">
 {% endfigure %}
 
 {% highlight html %}
-{% raw %}{% figure image-figure--shadow %}
+{% raw %}{% figure image-figure-shadow %}
   <img src="http://lorempixel.com/680/408/animals/" alt="Example image">
 {% endfigure %}{% endraw %}
 {% endhighlight %}

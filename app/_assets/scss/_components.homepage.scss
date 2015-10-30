@@ -6,7 +6,7 @@
 // in the context of the homepage.
 
 // Tagline
-.homepage-tagline__japanese {
+.homepage-tagline-japanese {
   @extend %japanese-font;
   color: $dark-moderate-green;
   font-size: modular-scale(6);
@@ -16,7 +16,7 @@
   text-shadow: 0 1px 1px $black;
 }
 
-.homepage-tagline__translation {
+.homepage-tagline-translation {
   font-size: modular-scale(0);
   margin-bottom: 30px;
 }
@@ -32,7 +32,7 @@
   }
 }
 
-.homepage-intro__text {
+.homepage-intro-text {
   flex-basis: 100%;
 
   @include breakpoint($grid-breakpoint-small) {
@@ -119,12 +119,12 @@
   }
 }
 
-.homepage-dictionary__flex {
+.homepage-dictionary-flex {
   display: flex;
   flex-wrap: wrap;
 }
 
-.homepage-dictionary__card {
+.homepage-dictionary-card {
   border: 1px solid rgba($very-dark-magenta, 0.1);
   box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
   color: $very-dark-magenta;
@@ -133,7 +133,7 @@
   padding: 35px 5px 10px;
 }
 
-.homepage-dictionary__japanese {
+.homepage-dictionary-japanese {
   @extend %japanese-font;
   flex-basis: 100%;
   font-weight: bold;
@@ -152,15 +152,15 @@
 
 }
 
-.homepage-dictionary__kanji {
+.homepage-dictionary-kanji {
   font-size: modular-scale(7);
 }
 
-.homepage-dictionary__kana {
+.homepage-dictionary-kana {
   font-size: modular-scale(2);
 }
 
-.homepage-dictionary__definitions {
+.homepage-dictionary-definitions {
   flex-basis: 100%;
   font-size: modular-scale(0);
   padding-bottom: 2em;
@@ -202,18 +202,18 @@
   }
 }
 
-.homepage-quote__flex {
+.homepage-quote-flex {
   display: flex;
   flex-wrap: wrap;
 }
 
-.homepage-quote__blockquote {
+.homepage-quote-blockquote {
   @include breakpoint($grid-breakpoint-small) {
     margin: 0;
   }
 }
 
-.homepage-quote__author {
+.homepage-quote-author {
   &:before {
     content: '– ';
   }
@@ -238,7 +238,7 @@
   }
 }
 
-.card__link {
+.card-link {
   bottom: 1em;
   font-size: modular-scale(0);
   position: absolute;

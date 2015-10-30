@@ -12,7 +12,7 @@ gulp.task('build:production', function(callback) {
     'images'
   ],
   'base64',
-  'combine:mediaqueries',
+  // 'combine:mediaqueries',
   [
     'optimize:html',
     'optimize:css',

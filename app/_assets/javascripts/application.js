@@ -17,7 +17,7 @@ var tracking   = require('./libs/tracking');
 
 var triggerBttn   = document.getElementById('trigger-overlay'),
     overlay       = document.querySelector('div.overlay'),
-    closeBttn     = overlay.querySelector('button.overlay__close'),
+    closeBttn     = overlay.querySelector('button.overlay-btn-close'),
     url           = window.location.href,
     trackingLinks = document.querySelectorAll('a');
 
@@ -30,7 +30,7 @@ $(function() {
   // MosaicFlow Gallery
   $('.recommendation').mosaicflow({
     minItemWidth: 200,
-    columnClass: 'recommendation__column'
+    columnClass: 'recommendation-column'
   });
 
   // FastClick
@@ -48,7 +48,7 @@ $(function() {
   $('#search-query').lunrSearch({
     indexUrl: '/search.json',             // URL of the `search.json` index data for your site
     results:  '#search-results',          // jQuery selector for the search results container
-    entries:  '.search-results__entries', // jQuery selector for the element to contain the results list, must be a child of the results element above.
+    entries:  '.search-results-entries', // jQuery selector for the element to contain the results list, must be a child of the results element above.
     template: '#search-results-template'  // jQuery selector for the Mustache.js template
   });
 

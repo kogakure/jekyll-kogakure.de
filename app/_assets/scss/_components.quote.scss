@@ -1,9 +1,9 @@
 //===================================
-//  Quotes with Footer, Author, Cite
+//  Quote with Footer, Author, Cite
 //===================================
 
 // Author
-.quote__author {
+.quote-author {
   font-style: normal;
 
   &:before {
@@ -17,7 +17,7 @@
 
 
 // Cite
-.quote__cite {
+.quote-cite {
   display: block;
 
   @include breakpoint($grid-breakpoint-medium) {
@@ -27,7 +27,7 @@
 
 
 // Long quotes
-.quote--longquote {
+.quote-longquote {
   border: 0;
   font-style: normal;
   margin-bottom: $default-spacing-bottom;

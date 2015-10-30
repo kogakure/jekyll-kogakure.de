@@ -33,33 +33,33 @@
   }
 }
 
-.aside__headline {
+.aside-headline {
   color: $white;
 }
 
-.aside--full {
+.aside-full {
   clear: both;
   width: 100%;
 }
 
 
 // Product recommendation
-.aside--recommendation {
+.aside-recommendation {
   background: $very-soft-green;
   position: relative;
   width: 100%;
 }
 
-.aside--recommendation__item {
+.aside-recommendation-item {
   @extend %clearfix;
 }
 
-.aside--recommendation__image {
+.aside-recommendation-image {
   float: left;
   margin: 0 1em 0 0;
 }
 
-.aside--recommendation__title {
+.aside-recommendation-title {
   clear: none;
   color: $very-dark-magenta;
   font-size: modular-scale(0);
@@ -69,10 +69,10 @@
   }
 }
 
-.aside--recommendation__contributors {
+.aside-recommendation-contributors {
   margin-bottom: 0.5em;
 }
 
-.aside--recommendation__link {
+.aside-recommendation-link {
   @extend %full-box-link;
 }

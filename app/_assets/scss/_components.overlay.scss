@@ -18,13 +18,13 @@
 }
 
 // Opended Overlay
-.overlay--open {
+.overlay-open {
   transform: translate3d(0%, 0, 0);
   transition: transform 0.5s;
   visibility: visible;
 }
 
-.overlay__close {
+.overlay-btn-close {
   background: transparent;
   border: 0;
   cursor: pointer;
@@ -39,7 +39,7 @@
   z-index: 100;
 }
 
-.overlay__close__icon {
+.overlay-btn-close-icon {
   height: 24px;
   width: 24px;
 }

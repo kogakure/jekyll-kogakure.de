@@ -3,11 +3,11 @@
 #
 # Outputs a aside tag
 #
-#   {% aside aside--left %}
+#   {% aside aside-left %}
 #   ...
 #   {% endaside %}
 #
-#   {% aside aside--right %}
+#   {% aside aside-right %}
 #   ...
 #   {% endaside %}
 
