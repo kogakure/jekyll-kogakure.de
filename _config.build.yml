@@ -9,6 +9,7 @@ url:         "http://kogakure.de"
 server_path: /to/my/website/
 
 # Publishing
+criticalcss: true
 future:      false
 show_drafts: false
 limit_posts: 0

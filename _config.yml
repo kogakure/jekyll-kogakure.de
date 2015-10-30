@@ -14,6 +14,7 @@ destination: ./build
 
 # Publishing
 encoding:    "utf-8"
+criticalcss: false
 future:      true
 show_drafts: true
 limit_posts: 5
