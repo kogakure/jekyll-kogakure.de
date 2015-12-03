@@ -7,6 +7,7 @@ body_class: "fullsize-grid page-movie-recommendations"
 ---
 
 <ul class="movies recommendation">
+  <li class="recommendation-sizer"></li>
   {% for movie in site.data.products.movies %}
     <li class="recommendation-item">
       <figure class="recommendation-layer" itemscope itemtype="http://schema.org/Movie">
@@ -35,4 +36,4 @@ body_class: "fullsize-grid page-movie-recommendations"
   {% endfor %}
 </ul>
 
-<a href="/kaufempfehlungen/" class="custom-underline-link">Zurück zur Übersicht</a>
+<a href="/kaufempfehlungen/">Zurück zur Übersicht</a>

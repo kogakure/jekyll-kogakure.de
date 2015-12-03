@@ -1,0 +1,101 @@
+/* Grid
+ *******/
+
+/* Grid settings */
+@lost gutter 15px;
+@lost cycle none;
+
+/* Base Grid
+ ***********
+ * 3 cols
+ * 6 cols at $grid-breakpoint-small
+ * 14 cols at $grid-breakpoint-medium
+ * 16 cols at $grid-breakpoint-large */
+
+/* Grids */
+.container {
+  lost-center: $container-max-width;
+  lost-utility: clearfix;
+
+  @media screen and (width >= $container-max-width) {
+    margin-bottom: 100px;
+  }
+}
+
+.wrapper {
+  lost-utility: clearfix;
+  padding: 0 15px;
+  position: relative;
+}
+
+.content {
+  lost-column: 3/3;
+  padding-top: $default-spacing-top;
+
+  @media screen and (width >= $grid-breakpoint-small) {
+    lost-column: 6/6;
+  }
+
+  @media screen and (width >= $grid-breakpoint-medium) {
+    lost-column: 12/14;
+    lost-move: 1/14;
+  }
+
+  @media screen and (width >= $grid-breakpoint-large) {
+    lost-column: 14/16;
+    lost-move: 1/16;
+  }
+
+  @media screen and (width >= $grid-breakpoint-xlarge) {
+    lost-column: 10/16;
+    lost-move: 3/16;
+  }
+}
+
+.fullsize-grid .content {
+  @media screen and (width >= $grid-breakpoint-xlarge) {
+    lost-column: 14/16;
+    lost-move: 1/16;
+  }
+}
+
+/* Article overview */
+.layout-articles-alphabetical {
+  lost-column: 3/3;
+
+  @media screen and (width >= $grid-breakpoint-small) {
+    lost-column: 1/2 2;
+  }
+
+  @media screen and (width >= $grid-breakpoint-large) {
+    lost-column: 5/14;
+  }
+}
+
+.layout-articles-chronological {
+  lost-column: 3/3;
+
+  @media screen and (width >= $grid-breakpoint-small) {
+    lost-column: 1/2;
+  }
+
+  @media screen and (width >= $grid-breakpoint-large) {
+    lost-column: 5/14;
+  }
+}
+
+.layout-categories {
+  lost-column: 3/3;
+
+  @media screen and (width >= $grid-breakpoint-large) {
+    lost-column: 4/14 3;
+  }
+}
+
+/* Generic layouts */
+.layout-10-of-14 {
+  @media screen and (width >= $grid-breakpoint-xlarge) {
+    clear: both;
+    lost-column: 10/14;
+  }
+}

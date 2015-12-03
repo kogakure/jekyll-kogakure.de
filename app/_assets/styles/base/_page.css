@@ -1,0 +1,64 @@
+/* Page
+ *******/
+
+@charset "UTF-8";
+
+@viewport {
+  width: device-width;
+}
+
+html {
+  @media screen and (width >= $iphone-width) {
+    text-size-adjust: none;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  overflow-scrolling: touch; /* Needed to have smooth scrolling on iOS */
+}
+
+/* Padding is included */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  @extend base-font;
+  @mixin pattern-bright-squares-bamboo;
+  color: $very-dark-magenta;
+  font-size: $base-font-size;
+  font-smoothing: subpixel-antialiased;
+  font-style: normal;
+  font-weight: $weight-normal;
+  hyphens: auto;
+  line-height: $base-line-height;
+  overflow-x: hidden;
+
+  .wf-active & {
+    @extend base-font-wf;
+  }
+}
+
+.wrapper {
+  @mixin pattern-stacked-circles;
+  background-color: rgba($white, 0.8);
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+.svg-icons {
+  left: -9999px;
+  position: absolute;
+  top: -9999px;
+}
+
+.footer {
+  clear: both;
+}

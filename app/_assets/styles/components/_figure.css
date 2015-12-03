@@ -1,0 +1,55 @@
+/* Figure and Image
+ *******************/
+
+.image-figure {
+  clear: both;
+  margin-bottom: $default-spacing-bottom;
+}
+
+.image-figure-link {
+  border: 0;
+}
+
+.image-figure-caption {
+  font-size: $modular-scale-0;
+  text-align: left;
+}
+
+
+/* Figures, which need a border
+ * Border is currently standard, but this may change someday. Some images
+ * need a border to look good. Add this class to make sure they will always
+ * have a border. */
+.image-figure-border img {
+  border: $image-border-size solid $image-border-color;
+}
+
+
+/* Figures, which should not have a border. */
+.image-figure-noborder img {
+  border: 0;
+}
+
+
+/* Figures with a shadow */
+.image-figure-shadow img {
+  box-shadow: 0 1px 3px rgba($black, 0.5);
+}
+
+
+/* Figures left aligned */
+.image-figure-left {
+  @media screen and (width >= $grid-breakpoint-medium) {
+    float: left;
+    margin: 0 $default-spacing-right 0 0;
+  }
+}
+
+
+/* Figures right aligned */
+.image-figure-right {
+  @media screen and (width >= $grid-breakpoint-medium) {
+    float: right;
+    margin: 0 0 0 $default-spacing-left;
+  }
+}

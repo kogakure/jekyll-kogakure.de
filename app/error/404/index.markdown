@@ -4,6 +4,8 @@ title: Nicht gefunden!
 error_page_404: true
 body_class: "page-error-404"
 robots: "noindex,follow"
+sitemap:
+  exclude: true
 ---
 
 # Oh nein! Diese Seite wurde nicht gefunden.

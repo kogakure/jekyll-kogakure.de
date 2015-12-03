@@ -1,13 +1,16 @@
 source "https://rubygems.org"
 
-gem 'octopress', '~> 3.0.0.rc.34'
-gem 'jekyll', '~> 2.5.2'
-gem 'sass', '>= 3.3'
+gem 'jekyll', '~> 3.0'
 
-gem 'csscss', '~> 1.3'       # Check CSS for recursion
-gem 'scss-lint'              # Check SCSS syntax
+group :jekyll_plugins do
+  gem 'jekyll-paginate'
+end
 
-gem 'nokogiri', '~> 1.6.3.1' # HTML, XML parser for lunr search
-gem 'json', '~> 1.8.1'
-gem 'rubypants', '~> 0.2.0'  # Needed for "Pullquote" plugin
-gem 'stringex', '~> 2.5.2'   # String operations on markdown
+gem 'octopress'
+gem 'classifier-reborn', '~> 2.0', '>= 2.0.3'
+gem 'json', '~> 1.8.3'
+gem 'pygments.rb', '~> 0.6.3' # Syntax Highlighting
+gem 'rubypants', '~> 0.2.0' # Needed for "Pullquote" plugin
+gem 'stringex', '~> 2.5.2' # String operations on markdown
+gem 'narray', :git => "https://github.com/tonyarnold/narray"
+gem 'gsl', :git => "https://github.com/tonyarnold/rb-gsl"

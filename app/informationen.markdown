@@ -4,7 +4,6 @@ title: "Informationen"
 description: "Informationen über diese Seite, warum es sie gibt, was der Domain-Name bedeutet, wie ich kontaktiert werden kann und mit welchen Tools die Website erstellt wurde."
 permalink: "/info/"
 body_class: "page-information"
-content_class: "custom-underline"
 ---
 
 ## Fachmagazin für Ninja, Ninjutsu und Kampfkunst
@@ -16,7 +15,7 @@ Die Idee dazu wurde von [Stefan Imhoff](http://stefanimhoff.de/), einem Designer
 
 ## Und warum?
 
-Seit Anfang der 90er, ursprünglich wahrscheinlich durch die Teenage Mutant [Hero Turtles](http://de.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles) auf das Ninjutsu gestoßen, interessierten mich die Ninja und ihre Gedankenwelt.
+Seit Anfang der 90er, ursprünglich wahrscheinlich durch die Teenage Mutant [Hero Turtles](https://de.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles) auf das Ninjutsu gestoßen, interessierten mich die Ninja und ihre Gedankenwelt.
 
 Damals war das [Bujinkan](http://bujinkan.com/) in Deutschland nur spärlich zu finden, eine Trainingsmöglichkeit nahezu unmöglich zu finden. Auch die erhältliche Fachliteratur war mehr als dürftig.
 
@@ -42,6 +41,6 @@ Ich wäre euch dankbar, wenn ihr vorher einen Blick in die [FAQ](/faq/) werfen k
 
 Wer es bis hier hin durchgehalten hat, den interessieren wahrscheinlich auch die technischen Details zu dieser Seite.
 
-Diese Seiten werden bei [Webfaction](https://www.webfaction.com?affiliate=kogakure) gehosted und laufen auf [Apache 2](http://httpd.apache.org/) und [nginx](http://nginx.org/).
+Diese Seiten werden bei [Webfaction](https://www.webfaction.com/?affiliate=kogakure) gehosted und laufen auf [Apache 2](http://httpd.apache.org/) und [nginx](http://nginx.org/).
 
-Alle Arbeiten wurden auf einem [Apple Macintosh](http://www.apple.com/de/) erstellt, die Grafiken wurden mit [Adobe Photoshop](http://www.adobe.de/products/photoshop/), [Adobe Illustrator](http://www.adobe.de/products/illustrator/) und [Affinity Designer](https://affinity.serif.com/) gestaltet, alle Templates und Codesegmente mit [Vim](http://www.vim.org/) per Hand geschrieben und mit [Git](http://git-scm.com/) versioniert. Die Seiten werden mit [Jekyll](http://jekyllrb.com/) generiert und die Entwicklungsumgebung und das Deployment werden mit [Gulp.js](http://gulpjs.com/) automatisiert.
+Alle Arbeiten wurden auf einem [Apple Macintosh](http://www.apple.com/de/) erstellt, die Grafiken wurden mit *Adobe Photoshop*, *Adobe Illustrator* und [Affinity Designer](https://affinity.serif.com/) gestaltet, alle Templates und Codesegmente mit [Vim](http://www.vim.org/) per Hand geschrieben und mit [Git](http://git-scm.com/) versioniert. Die Seiten werden mit [Jekyll](http://jekyllrb.com/) generiert und die Entwicklungsumgebung und das Deployment werden mit [Gulp.js](http://gulpjs.com/) automatisiert.

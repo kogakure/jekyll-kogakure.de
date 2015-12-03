@@ -15,6 +15,7 @@ body_class: "fullsize-grid page-recommendations"
 
 <ul class="books recommendation recommendation-latest">
   {% assign recommended_books = site.data.products.books | where:"recommendation",true %}
+  <li class="recommendation-sizer"></li>
   {% for book in recommended_books limit:3 %}
     <li class="recommendation-item">
       <figure class="recommendation-layer" itemscope itemtype="http://schema.org/Book">
@@ -43,7 +44,7 @@ body_class: "fullsize-grid page-recommendations"
   {% endfor %}
 </ul>
 
-<a href="/kaufempfehlungen/buecher/" class="custom-underline-link">Alle {{ site.data.products.books | size }} Buch-Empfehlungen ansehen</a>
+<a href="/kaufempfehlungen/buecher/">Alle {{ site.data.products.books | size }} Buch-Empfehlungen ansehen</a>
 
 <hr>
 
@@ -53,6 +54,7 @@ body_class: "fullsize-grid page-recommendations"
 
 <ul class="movies recommendation recommendation-latest">
   {% assign recommended_movies = site.data.products.movies | where:"recommendation",true %}
+  <li class="recommendation-sizer"></li>
   {% for movie in recommended_movies limit:3 %}
     <li class="recommendation-item">
       <figure class="recommendation-layer" itemscope itemtype="http://schema.org/Movie">
@@ -81,4 +83,4 @@ body_class: "fullsize-grid page-recommendations"
   {% endfor %}
 </ul>
 
-<a href="/kaufempfehlungen/filme/" class="custom-underline-link">Alle {{ site.data.products.movies | size }} Film-Empfehlungen ansehen</a>
+<a href="/kaufempfehlungen/filme/">Alle {{ site.data.products.movies | size }} Film-Empfehlungen ansehen</a>

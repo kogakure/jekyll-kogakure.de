@@ -16,8 +16,12 @@
     "url": "/zitate/"
   },
   {
-    "title": "Kaufempfehlungen",
-    "url": "/kaufempfehlungen/"
+    "title": "Bücher",
+    "url": "/kaufempfehlungen/buecher/"
+  },
+  {
+    "title": "Filme",
+    "url": "/kaufempfehlungen/filme/"
   },
   {
     "title": "Information",

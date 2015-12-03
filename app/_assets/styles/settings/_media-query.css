@@ -1,0 +1,10 @@
+/* Media Query/Breakpoint
+ *************************/
+
+$iphone-width:             480px;
+$grid-breakpoint-small:    500px;
+$grid-breakpoint-medium:   650px;
+$grid-breakpoint-large:    750px;
+$grid-breakpoint-xlarge:   820px;
+$grid-breakpoint-xxlarge:  1024px;
+$content-pullquote-inline: 680px;

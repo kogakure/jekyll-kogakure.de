@@ -4,10 +4,10 @@
 {% capture author %}{% if page.author %}{{ page.author }}{% else %}{{ site.data.settings.author }}{% endif %}{% endcapture %}
 {% capture keywords %}{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.data.settings.seo.keywords }}{% endif %}{% endcapture %}
 <!DOCTYPE html>
-<!--[if lt IE 7]><html lang="de" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html lang="de" class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html lang="de" class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html lang="de" class="no-js"><!--<![endif]-->
+<!--[if lt IE 7]><html lang="de" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="de" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="de" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="de"><!--<![endif]-->
 
 {% include head.html %}
 
@@ -17,11 +17,10 @@
     {% include svg/icons.svg %}
   </div>
 
-  {% include navigation_noscript.html %}
-
   <div class="container">
     {% include header.html %}
     <div class="wrapper">
+      {% include navigation.html %}
       <div class="content{% if page.content_class %} {{ page.content_class }}{% endif %}">
         {{ content | nospace }}
         {% include footer.html %}
@@ -29,10 +28,6 @@
     </div>
   </div>
 
-  {% include overlay.html %}
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/assets/js/jquery.js"><\/script>')</script>
   <script src="/assets/js/application.js"></script>
 </body>
 </html>

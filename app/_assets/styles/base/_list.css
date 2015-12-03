@@ -1,0 +1,76 @@
+/* List
+ *******/
+
+li {
+  line-height: 1.8;
+
+  @media screen and (width >= $grid-breakpoint-small) {
+    line-height: 1.5;
+  }
+}
+
+ol {
+  list-style: decimal;
+  margin-bottom: $default-spacing-bottom;
+  margin-left: $default-spacing-left;
+  margin-right: $default-spacing-right;
+
+  @media screen and (width >= $grid-breakpoint-medium) {
+    list-style: decimal;
+    margin-left: 0;
+    margin-right: 0;
+
+    blockquote & {
+      margin-left: $default-spacing-left;
+      margin-right: $default-spacing-right;
+    }
+  }
+}
+
+ol ol {
+  list-style: lower-latin;
+  margin: 0 $default-spacing;
+}
+
+ul {
+  list-style: disc;
+  margin-bottom: $default-spacing-bottom;
+  margin-left: $default-spacing-left;
+  margin-right: $default-spacing-right;
+
+  @media screen and (width >= $grid-breakpoint-medium) {
+    margin-left: 0;
+    margin-right: 0;
+
+    blockquote & {
+      margin-left: $default-spacing-left;
+      margin-right: $default-spacing-right;
+    }
+  }
+}
+
+ul.categories {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+ul ul {
+  list-style: circle;
+  margin: 0 $default-spacing;
+}
+
+dl {
+  margin-bottom: $default-spacing-bottom;
+}
+
+dt {
+  font-weight: $weight-bold;
+}
+
+dt + dd {
+  margin-bottom: $default-spacing-bottom;
+}
+
+dd {
+  margin-left: 0;
+}

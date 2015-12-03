@@ -6,11 +6,9 @@ var config = require('../../config').watch;
  */
 gulp.task('watch', ['browsersync'], function() {
   gulp.watch(config.jekyll,      ['jekyll-rebuild']);
-  gulp.watch(config.sass,        ['sass', 'scsslint']);
+  gulp.watch(config.styles,      ['styles', 'lint-styles']);
   gulp.watch(config.scripts,     ['scripts', 'jshint']);
   gulp.watch(config.images,      ['images']);
   gulp.watch(config.thumbnails,  ['thumbnails']);
   gulp.watch(config.svg,         ['svg']);
-  gulp.watch(config.loadcss,     ['loadcss', 'jekyll-rebuild']);
-  gulp.watch(config.criticalcss, ['criticalcss', 'jekyll-rebuild']);
 });

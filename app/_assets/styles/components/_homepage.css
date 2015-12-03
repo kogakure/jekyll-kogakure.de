@@ -1,0 +1,207 @@
+/* Homepage
+ ***********/
+
+/* Very specific modules, which only work
+ * in the context of the homepage. */
+
+/* Tagline */
+.homepage-tagline-japanese {
+  @extend japanese-font;
+  color: $dark-moderate-green;
+  font-size: $modular-scale-6;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 0;
+  text-shadow: 0 1px 1px $black;
+}
+
+.homepage-tagline-translation {
+  font-size: $modular-scale-0;
+  margin-bottom: 30px;
+}
+
+
+/* Homepage Intro */
+.homepage-intro {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (width >= $grid-breakpoint-small) {
+    flex-wrap: nowrap;
+  }
+}
+
+.homepage-intro-text {
+  flex-basis: 100%;
+
+  @media screen and (width >= $grid-breakpoint-small) {
+    flex-basis: 80%;
+  }
+}
+
+
+/* Flipboard */
+.homepage-flipboard {
+  flex-basis: 100%;
+  margin: 0 $default-spacing $default-spacing-bottom;
+  min-width: 150px;
+  text-align: center;
+
+  @media screen and (width >= $grid-breakpoint-small) {
+    flex-basis: 20%;
+    margin: 0 0 $default-spacing-bottom $default-spacing-left;
+  }
+
+  iframe {
+    background: $black;
+  }
+}
+
+
+/* Kategorien */
+.homepage-categories {
+  lost-column: 3/3;
+
+  @media screen and (width >= $grid-breakpoint-medium) {
+    lost-column: 1/2;
+  }
+}
+
+
+/* Downloads */
+.homepage-download {
+  lost-column: 3/3;
+
+  @media screen and (width >= $grid-breakpoint-medium) {
+    lost-column: 1/2 2;
+  }
+}
+
+
+/* .clear { clear: both; }
+ * Dictionary Entry on Homepage */
+.homepage-dictionary {
+  lost-column: 3/3;
+
+  @media screen and (width >= $grid-breakpoint-small) {
+    lost-column: 1/2;
+  }
+}
+
+.homepage-dictionary-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.homepage-dictionary-card {
+  border: 1px solid rgba($very-dark-magenta, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
+  color: $very-dark-magenta;
+  display: inline-block;
+  line-height: 1;
+  padding: 35px 5px 10px;
+}
+
+.homepage-dictionary-japanese {
+  @extend japanese-font;
+  flex-basis: 100%;
+  font-weight: bold;
+  margin-bottom: 20px;
+  min-width: 80px;
+  text-align: center;
+
+  @media screen and (width >= $grid-breakpoint-small) {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  @media screen and (width >= $grid-breakpoint-large) {
+    flex-basis: 30%;
+  }
+
+}
+
+.homepage-dictionary-kanji {
+  font-size: $modular-scale-7;
+}
+
+.homepage-dictionary-kana {
+  font-size: $modular-scale-2;
+}
+
+.homepage-dictionary-definitions {
+  flex-basis: 100%;
+  font-size: $modular-scale-0;
+  padding-bottom: 2em;
+
+  @media screen and (width >= $grid-breakpoint-small) {
+    padding: 0;
+  }
+
+  @media screen and (width >= $grid-breakpoint-medium) {
+    padding: 0 0 1.5em 2em;
+  }
+
+  @media screen and (width >= $grid-breakpoint-large) {
+    flex-basis: 70%;
+    padding: 1.5em 1.5em 1.5em 2em;
+  }
+
+  ol {
+    list-style-type: lower-alpha;
+    margin-bottom: 0;
+  }
+}
+
+
+/* Quote */
+.homepage-quote {
+  lost-column: 3/3;
+
+  @media screen and (width >= $grid-breakpoint-small) {
+    lost-column: 1/2 2;
+  }
+}
+
+.homepage-quote-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.homepage-quote-blockquote {
+  @media screen and (width >= $grid-breakpoint-small) {
+    margin: 0;
+  }
+}
+
+.homepage-quote-author {
+  &:before {
+    content: "– ";
+  }
+}
+
+
+/* Card Pattern */
+.card {
+  background: rgba($white, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
+  clear: both;
+  margin-bottom: $default-spacing-bottom;
+  padding: 1em 1em 2em;
+  position: relative;
+
+  @media screen and (width >= $grid-breakpoint-small) {
+    min-height: 300px;
+  }
+
+  @media screen and (width >= $grid-breakpoint-large) {
+    min-height: 200px;
+  }
+}
+
+.card-link {
+  bottom: 1em;
+  font-size: $modular-scale-0;
+  position: absolute;
+  right: 1em;
+}

@@ -1,6 +1,8 @@
 ---
 layout: null
 permalink: .htaccess
+sitemap:
+  exclude: true
 ---
 
 # ------------------------------------------------------------------------------
@@ -54,6 +56,9 @@ Redirect Gone /kurzmeldungen/wechsel-des-hosters/
 Redirect Gone /kurzmeldungen/togakure-ryu-taijutsu-no-kata-bujinkan-budo-densho/
 Redirect Gone /kurzmeldungen/neue-buecher-herbst-2011-tengu-publishing/
 Redirect Gone /service/journal/archiv/2005/01/17/planetopia-jamba-und-sonstige-deppen/
+Redirect Gone /mint/pepper/orderedlist/downloads/download.php/?file=http%253A//kogakure.de/images/artikel/werkzeuge-doka.jpg
+Redirect Gone /mint/pepper/orderedlist/downloads/download.php/?file=http%253A//kogakure.de/images/artikel/werkzeuge-gando.jpg
+Redirect Gone /mint/pepper/orderedlist/downloads/download.php/?file=http%253A//kogakure.de/images/artikel/werkzeuge-uchidake.jpg
 
 # Redirects (Permanent)
 Redirect 301 /a.html /lexikon/

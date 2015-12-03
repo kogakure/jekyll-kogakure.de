@@ -11,7 +11,7 @@ homepage: true
 </div>
 
 <div class="homepage-intro">
-  <div class="homepage-intro-text custom-underline">
+  <div class="homepage-intro-text">
     <p>Willkommen auf <strong>kogakure.de</strong>. Seit 1999 kann man hier Artikel, Textsammlungen und Übersetzungen zu Themen rund um die japanischen Schattenkrieger und Spione, die <strong>Ninja</strong>, und deren Kampfkunst <strong>Ninjutsu</strong> lesen.</p>
     <p>Beim ersten Besuch empfehle ich, zuerst mit dem Artikel <a href="/artikel/ninjutsu/">Ninjutsu</a> zu starten, eine Übersicht über alle Artikel ist im <a href="/artikel/">Artikelverzeichnis</a> zu finden.</p>
   </div>
@@ -21,16 +21,14 @@ homepage: true
   </div>
 </div>
 
-<div class="categories-download">
-  <div class="homepage-categories">
-    <h2>Kategorien</h2>
-    {% include categories_list.html %}
-  </div>
+<div class="homepage-categories">
+  <h2>Kategorien</h2>
+  {% include categories_list.html %}
+</div>
 
-  <div class="homepage-download">
-    <h2>Download</h2>
-    <p>Die Ninja von Iga verwendeten eine <strong>Geheimschrift</strong>. Ich habe aus der Holztafel des Ninja-Museums von Iga eine Schriftart zum <a href="/downloads/ingo.zip">Download</a> erstellt.</p>
-  </div>
+<div class="homepage-download">
+  <h2>Download</h2>
+  <p>Die Ninja von Iga verwendeten eine <strong>Geheimschrift</strong>. Ich habe aus der Holztafel des Ninja-Museums von Iga eine Schriftart zum <a href="/downloads/ingo.zip">Download</a> erstellt.</p>
 </div>
 
 <div class="homepage-dictionary">
@@ -47,7 +45,7 @@ homepage: true
         <li>verstecken, verbergen, spähen, schleichen</li>
       </ol>
     </div>
-    <a href="/lexikon/" class="card-link custom-underline-link">Mehr Einträge ansehen</a>
+    <a href="/lexikon/" class="card-link">Mehr Einträge ansehen</a>
   </div>
 </div>
 
@@ -61,7 +59,7 @@ homepage: true
           <strong class="homepage-quote-author">aus China</strong>
       </blockquote>
     </footer>
-      <a href="/zitate/" class="card-link custom-underline-link">Mehr Zitate ansehen</a>
+      <a href="/zitate/" class="card-link">Mehr Zitate ansehen</a>
     </div>
   </div>
 </div>
@@ -87,11 +85,6 @@ homepage: true
     {% endfor %}
   </ul>
   <a href="/kaufempfehlungen/" class="recommendations-link">Mehr Empfehlungen ansehen</a>
-</div>
-
-<h2>Suche</h2>
-<div class="search">
-  {% include search.html %}
 </div>
 
 <h2>Soziale Netzwerke</h2>

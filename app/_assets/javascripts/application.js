@@ -1,37 +1,53 @@
-/* global $:false, jQuery:false, FastClick:false, fitVids:false, classie:false */
+/* global FastClick:false, fitVids:false, classie:false */
 
-require('modernizr');
+'use strict';
+
 require('fastclick');
 require('fitvids');
 require('classie');
 require('./vendor/ios-rotate-scaling-fix');
-require('lunr.js');
-require('mustache');
-require('jquery.mosaicflow');
-require('date.format');
-require('uri.js');
-require('jquery.lunr.search');
 
+var Masonry    = require('masonry-layout'); // @TODO: remove
+var imagesLoaded = require('imagesloaded');
 var navigation = require('./libs/navigation');
 var tracking   = require('./libs/tracking');
 
-var triggerBttn   = document.getElementById('trigger-overlay'),
-    overlay       = document.querySelector('div.overlay'),
-    closeBttn     = overlay.querySelector('button.overlay-btn-close'),
-    url           = window.location.href,
-    trackingLinks = document.querySelectorAll('a');
+var url                 = window.location.href;
+var gallery             = document.querySelector('.recommendation');
+var galleryLatestBooks  = document.querySelector('.recommendation-latest.books');
+var galleryLatestMovies = document.querySelector('.recommendation-latest.movies');
+var trackingLinks       = document.querySelectorAll('a');
 
-$(function() {
-  'use strict';
+var masonryOptions = {
+  itemSelector: '.recommendation-item',
+  columnWidth: '.recommendation-sizer',
+  gutter: 10,
+  percentPosition: true,
+  transitionDuration: 0
+};
 
-  // Show navigation handle
-  navigation.showNavigationHandle();
+if ('querySelector' in document && 'addEventListener' in window) {
+  document.addEventListener('DOMContentLoaded', function() {
 
-  // MosaicFlow Gallery
-  $('.recommendation').mosaicflow({
-    minItemWidth: 200,
-    columnClass: 'recommendation-column'
+    // Masonry
+    if (gallery) {
+      imagesLoaded(gallery, function() {
+        var msnry = new Masonry(gallery, masonryOptions);
+      });
+    }
+
+    // Masonry on overview page
+    if (galleryLatestBooks) {
+      imagesLoaded(galleryLatestBooks, function() {
+        var msnry = new Masonry(galleryLatestBooks, masonryOptions);
+      });
+    }
+
+    if (galleryLatestMovies) {
+      imagesLoaded(galleryLatestMovies, function() {
+        var msnry = new Masonry(galleryLatestMovies, masonryOptions);
   });
+    }
 
   // FastClick
   FastClick.attach(document.body);
@@ -44,18 +60,11 @@ $(function() {
     classie.add(navigation.currentNavigationItem().parentElement, 'nav-is-active');
   }
 
-  // Lunr.js Search
-  $('#search-query').lunrSearch({
-    indexUrl: '/search.json',             // URL of the `search.json` index data for your site
-    results:  '#search-results',          // jQuery selector for the search results container
-    entries:  '.search-results-entries', // jQuery selector for the element to contain the results list, must be a child of the results element above.
-    template: '#search-results-template'  // jQuery selector for the Mustache.js template
-  });
+    // Tracking of all links
+    for (var i = 0, len = trackingLinks.length; i < len; i++) {
+      var trackingLink = trackingLinks[i];
 
-  // Navigation
-  triggerBttn.addEventListener('click', navigation.toggleOverlay);
-  closeBttn.addEventListener('click', navigation.toggleOverlay);
-
-  // Tracking of all links
-  $(trackingLinks).on('click', tracking.trackLinksWithGoogleAnalytics);
+      trackingLink.addEventListener('click', tracking.trackLinksWithGoogleAnalytics);
+    }
 });
+}

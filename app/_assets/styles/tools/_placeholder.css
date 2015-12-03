@@ -1,0 +1,63 @@
+/* Placeholder/Extend
+ *********************/
+
+/* Fonts */
+@define-extend base-font {
+  font-family: $base-font-family;
+}
+
+@define-extend base-font-wf {
+  font-family: $base-font-family-wf;
+}
+
+@define-extend mono-font {
+  font-family: Menlo, Monaco, "Andale Mono", "Lucida console", "Courier New", monospace;
+}
+
+@define-extend japanese-font {
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+@define-extend japanese-font-serif {
+  font-family: "Hiragino Mincho ProN", serif;
+}
+
+
+/* Image-Replacement (Kellum Method)
+ * http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ */
+@define-extend text-hidden {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.text-hidden {
+  @extend text-hidden;
+}
+
+
+/* Hide text visually */
+@define-extend visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Full box link
+ * Parent element needs: `position: relative` */
+@define-extend full-box-link {
+  font-size: 0;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  text-indent: 200%;
+  top: 0;
+  white-space: nowrap;
+  width: 100%;
+}

@@ -1,0 +1,42 @@
+/* Image
+ ********/
+
+/* Images, which need a border */
+.image-border {
+  border: $image-border-size solid $image-border-color;
+}
+
+/* Images, which should not have a border */
+.image-noborder {
+  border: 0;
+}
+
+/* Images left aligned (maximum 350px width) */
+.image-left {
+
+  /* Small images (width 150px or smaller) */
+  &.image-small {
+    float: left;
+    margin: 0 $default-spacing-right $default-spacing-bottom 0;
+  }
+
+  @media screen and (width >= $grid-breakpoint-medium) {
+    float: left;
+    margin: 0 $default-spacing-right $default-spacing-bottom 0;
+  }
+}
+
+/* Images right aligned (maximal 350px width) */
+.image-right {
+
+  /* Small images (width 150px or smaller) */
+  &.image-small {
+    float: right;
+    margin: 0 0 $default-spacing-bottom $default-spacing-left;
+  }
+
+  @media screen and (width >= $grid-breakpoint-medium) {
+    float: right;
+    margin: 0 0 $default-spacing-bottom $default-spacing-left;
+  }
+}

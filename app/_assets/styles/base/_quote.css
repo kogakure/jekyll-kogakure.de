@@ -1,0 +1,56 @@
+/* Quote
+ ********/
+
+/* Blockquote */
+blockquote {
+  border-left: 5px solid $strong-green;
+  font-style: italic;
+  margin: $default-spacing-top $default-spacing-top $default-spacing-bottom 0.5em;
+  padding-left: 1em;
+
+  @media screen and (width >= $grid-breakpoint-small) {
+    margin-left: $default-spacing-left;
+  }
+}
+
+
+/* Cite */
+cite {
+  font-style: italic;
+}
+
+
+/* Inline Quotes */
+q {
+  font-style: italic;
+
+  &:before {
+    content: open-quote;
+  }
+
+  &:after {
+    content: close-quote;
+  }
+}
+
+:lang(de) > q,
+.article-body q[lang|=de] {
+  quotes: "»" "«" "›" "‹";
+  /* quotes: "„" "“" "‚" "‘"; Alternative German quotes */
+}
+
+:lang(en) > q,
+.article-body q[lang|=en] {
+  quotes: "“" "”" "‘" "’";
+}
+
+:lang(fr) > q,
+.article-body q[lang|=fr] {
+  quotes: "« " " »" "“" "”";
+}
+
+:lang(ja) > q,
+.article-body q[lang|=ja] {
+  font-style: normal;
+  quotes: "「" "」," "『" "』";
+}

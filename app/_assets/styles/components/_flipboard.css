@@ -1,0 +1,102 @@
+/* Flipboard
+ ************/
+
+.flipboard {
+  display: inline-block;
+  height: 200px;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  width: 150px;
+
+  &:hover .flipboard-button {
+    background-color: $flipboard-button-background-hover;
+    border: 0;
+    cursor: pointer;
+  }
+
+  &:active .flipboard-button {
+    background-color: $flipboard-button-background-active;
+    outline: 0;
+  }
+}
+
+.flipboard-information {
+  display: table-cell;
+  height: 98px;
+  margin-top: 10px;
+  position: relative;
+  vertical-align: middle;
+  z-index: 5;
+}
+
+.flipboard-title,
+.flipboard-author {
+  color: $flipboard-color-info;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.flipboard-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0.25em;
+}
+
+.flipboard-author {
+  color: $flipboard-color-author;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.flipboard-translucent,
+.flipboard-image {
+  background: $flipboard-cover-background no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.flipboard-translucent {
+  background-color: rgba($black, 0.4);
+  z-index: 2;
+}
+
+.flipboard-image {
+  background-image: url(/assets/images/stylesheets/flipboard/cover.jpg);
+  background-position: center center;
+  z-index: 1;
+}
+
+.flipboard-logo {
+  background-image: url(/assets/images/stylesheets/flipboard/logo.png);
+  display: block;
+  height: 52px;
+  position: relative;
+  width: 40px;
+  z-index: 5;
+}
+
+.flipboard-footer {
+  bottom: 10px;
+  position: absolute;
+  text-align: center;
+  width: 130px;
+  z-index: 5;
+}
+
+.flipboard-button {
+  background-color: rgba($flipboard-button-background, 0);
+  border: 1px solid $white;
+  border-radius: 4px;
+  color: $white;
+  display: block;
+  height: 30px;
+  width: 100%;
+}

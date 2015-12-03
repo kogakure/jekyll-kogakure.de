@@ -4,6 +4,8 @@ title: Seite entfernt!
 error_page_410: true
 body_class: "page-error-410"
 robots: "noindex,follow"
+sitemap:
+  exclude: true
 ---
 
 # Oh nein! Diese Seite gibt es nicht.

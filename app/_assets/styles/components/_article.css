@@ -1,0 +1,23 @@
+/* Article
+ **********/
+
+.article-title,
+.article-meta {
+  @media screen and (width >= $grid-breakpoint-xlarge) {
+    text-align: center;
+  }
+}
+
+.article-meta {
+  font-size: 14px;
+  margin-bottom: 3em;
+}
+
+.article-author {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.article-author-byline {
+  font-weight: normal;
+}

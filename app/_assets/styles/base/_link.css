@@ -1,0 +1,7 @@
+/* Link
+ *******/
+
+a {
+  /* normal, hover, active, visited, focus */
+  @mixin link-colors $link-color, color($link-color lightness(20%)), $link-color, $link-color, $link-color;
+}

@@ -2,21 +2,7 @@
   "name": "kogakure",
   "private": true,
   "dependencies": {
-    "color-schemer": "~0.2.8",
     "fastclick": "~1.0.3",
-    "jquery": "~1.11.1",
-    "jquery.mosaicflow": "~0.2.5",
-    "loadcss": "~0.1.2",
-    "lunr.js": "~0.5.5",
-    "modernizr": "~2.8.3",
-    "modular-scale": "~2.0.5",
-    "mustache.js": "~0.8.2",
-    "sass-toolkit": "~2.6.0",
-    "scss-blend-modes": "~0.0.2",
-    "singularity": "~1.4.0",
-    "uri.js": "~1.13.2"
-  },
-  "resolutions": {
-    "scss-blend-modes": "a787b33e81"
+    "loadcss": "~0.1.2"
   }
 }

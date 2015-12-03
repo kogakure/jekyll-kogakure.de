@@ -1,0 +1,9 @@
+<nav class="nav">
+  <ul class="nav-menu">
+    {% for navigation in site.data.navigation %}
+      <li class="nav-item">
+        <a href="{{ navigation.url }}" class="nav-link">{{ navigation.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

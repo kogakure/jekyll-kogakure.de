@@ -7,10 +7,11 @@ body_class: "fullsize-grid page-book-recommendations"
 ---
 
 <ul class="books recommendation">
+    <li class="recommendation-sizer"></li>
   {% for book in site.data.products.books %}
     <li class="recommendation-item">
       <figure class="recommendation-layer" itemscope itemtype="http://schema.org/Book">
-        <img class="recommendation-image" width="300" src="/assets/images/{{ book.cover }}" alt="{{ book.title }}" itemprop="image">
+        <img class="recommendation-image" src="/assets/images/{{ book.cover }}" alt="{{ book.title }}" itemprop="image">
         <figcaption class="recommendation-info">
           <h2 class="recommendation-info-title" itemprop="name">{{ book.title | truncate:"150" }}</h2>
           <p class="recommendation-info-contributors">
@@ -35,4 +36,4 @@ body_class: "fullsize-grid page-book-recommendations"
   {% endfor %}
 </ul>
 
-<a href="/kaufempfehlungen/" class="custom-underline-link">Zurück zur Übersicht</a>
+<a href="/kaufempfehlungen/">Zurück zur Übersicht</a>

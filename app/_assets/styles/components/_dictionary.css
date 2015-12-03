@@ -1,0 +1,45 @@
+/* Dictionary
+ *************/
+
+.dictionary-japanese {
+  @extend japanese-font;
+  font-size: $modular-scale-4;
+  line-height: 1.2;
+  margin-bottom: 0.3em;
+
+  &:hover {
+    @extend japanese-font-serif;
+  }
+
+  @media screen and (width >= 450px) {
+    font-size: $modular-scale-5;
+  }
+
+  @media screen and (width >= $grid-breakpoint-xlarge) {
+    lost-column: 1/2;
+  }
+}
+
+.dictionary-romanji {
+  color: $strong-green;
+  font-feature-settings: "liga", "dlig";
+  font-size: $modular-scale-4;
+  font-weight: $weight-bold;
+  hyphens: manual;
+  line-height: 1.2;
+  margin-bottom: 0.3em;
+
+  @media screen and (width >= $grid-breakpoint-xlarge) {
+    font-size: $modular-scale-5;
+    lost-column: 1/2 0;
+    margin-right: 0 !important;
+    text-align: right;
+  }
+}
+
+.dictionary-description {
+  border-bottom: 1px solid rgba($very-dark-magenta, 0.1);
+  lost-utility: clearfix;
+  margin-bottom: $default-spacing-bottom;
+  padding-bottom: $default-spacing-bottom;
+}

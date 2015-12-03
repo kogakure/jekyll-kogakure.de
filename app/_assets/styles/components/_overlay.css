@@ -1,0 +1,44 @@
+/* Overlay
+ **********/
+
+/* Overlay style */
+.overlay {
+  backface-visibility: hidden;
+  background: $white;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.5s, visibility 0s 0.5s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Opended Overlay */
+.overlay-open {
+  transform: translate3d(0%, 0, 0);
+  transition: transform 0.5s;
+  visibility: visible;
+}
+
+.overlay-btn-close {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  height: 44px;
+  outline: none;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 44px;
+  z-index: 100;
+}
+
+.overlay-btn-close-icon {
+  height: 24px;
+  width: 24px;
+}
