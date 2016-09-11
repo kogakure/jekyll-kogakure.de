@@ -33,28 +33,6 @@
 
 .homepage-intro-text {
   flex-basis: 100%;
-
-  @media screen and (width >= $grid-breakpoint-small) {
-    flex-basis: 80%;
-  }
-}
-
-
-/* Flipboard */
-.homepage-flipboard {
-  flex-basis: 100%;
-  margin: 0 $default-spacing $default-spacing-bottom;
-  min-width: 150px;
-  text-align: center;
-
-  @media screen and (width >= $grid-breakpoint-small) {
-    flex-basis: 20%;
-    margin: 0 0 $default-spacing-bottom $default-spacing-left;
-  }
-
-  iframe {
-    background: $black;
-  }
 }
 
 
@@ -175,7 +153,7 @@
 }
 
 .homepage-quote-author {
-  &:before {
+  &::before {
     content: "– ";
   }
 }

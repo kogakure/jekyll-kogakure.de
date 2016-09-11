@@ -1,22 +1,19 @@
-/* global FastClick:false, fitVids:false, classie:false */
+/* global classie:false */
 
-'use strict';
-
-require('fastclick');
-require('fitvids');
 require('classie');
 require('./vendor/ios-rotate-scaling-fix');
 
-var Masonry    = require('masonry-layout'); // @TODO: remove
+var Masonry = require('masonry-layout');
+var fitvids = require('fitvids');
+var attachFastClick = require('fastclick');
 var imagesLoaded = require('imagesloaded');
 var navigation = require('./libs/navigation');
-var tracking   = require('./libs/tracking');
+var tracking = require('./libs/tracking');
 
-var url                 = window.location.href;
-var gallery             = document.querySelector('.recommendation');
-var galleryLatestBooks  = document.querySelector('.recommendation-latest.books');
+var gallery = document.querySelector('.recommendation');
+var galleryLatestBooks = document.querySelector('.recommendation-latest.books');
 var galleryLatestMovies = document.querySelector('.recommendation-latest.movies');
-var trackingLinks       = document.querySelectorAll('a');
+var trackingLinks = document.querySelectorAll('a');
 
 var masonryOptions = {
   itemSelector: '.recommendation-item',
@@ -46,19 +43,19 @@ if ('querySelector' in document && 'addEventListener' in window) {
     if (galleryLatestMovies) {
       imagesLoaded(galleryLatestMovies, function() {
         var msnry = new Masonry(galleryLatestMovies, masonryOptions);
-  });
+      });
     }
 
-  // FastClick
-  FastClick.attach(document.body);
+    // FastClick
+    attachFastClick(document.body);
 
-  // Fitvids
-  fitVids('.container');
+    // Fitvids
+    fitvids('.container');
 
-  // Hightlighting of navigation item
-  if (navigation.currentNavigationItem()) {
-    classie.add(navigation.currentNavigationItem().parentElement, 'nav-is-active');
-  }
+    // Hightlighting of navigation item
+    if (navigation.currentNavigationItem()) {
+      classie.add(navigation.currentNavigationItem().parentElement, 'nav-is-active');
+    }
 
     // Tracking of all links
     for (var i = 0, len = trackingLinks.length; i < len; i++) {
@@ -66,5 +63,5 @@ if ('querySelector' in document && 'addEventListener' in window) {
 
       trackingLink.addEventListener('click', tracking.trackLinksWithGoogleAnalytics);
     }
-});
+  });
 }

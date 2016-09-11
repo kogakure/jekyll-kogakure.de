@@ -15,10 +15,6 @@ homepage: true
     <p>Willkommen auf <strong>kogakure.de</strong>. Seit 1999 kann man hier Artikel, Textsammlungen und Übersetzungen zu Themen rund um die japanischen Schattenkrieger und Spione, die <strong>Ninja</strong>, und deren Kampfkunst <strong>Ninjutsu</strong> lesen.</p>
     <p>Beim ersten Besuch empfehle ich, zuerst mit dem Artikel <a href="/artikel/ninjutsu/">Ninjutsu</a> zu starten, eine Übersicht über alle Artikel ist im <a href="/artikel/">Artikelverzeichnis</a> zu finden.</p>
   </div>
-
-  <div class="homepage-flipboard">
-    {% include flipboard.html %}
-  </div>
 </div>
 
 <div class="homepage-categories">
@@ -72,14 +68,14 @@ homepage: true
     {% for book in recommended_books limit:3 %}
       <li class="recommendation-homepage-item">
         <a class="recommendation-homepage-link" href="http://www.amazon.de/gp/product/{{ book.asin }}?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN={{ movie.asin }}" target="_blank">
-          <img class="recommendation-homepage-image" width="100" src="/assets/images/{{ book.thumbnail }}" alt="{{ book.title }}" itemprop="image">
+          <img class="recommendation-homepage-image" width="100" src="/assets/images/{{ book.thumbnail }}" alt="{{ book.title }}">
         </a>
       </li>
     {% endfor %}
     {% for movie in recommended_movies limit:3 %}
       <li class="recommendation-homepage-item">
         <a class="recommendation-homepage-link" href="http://www.amazon.de/gp/product/{{ movie.asin }}?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN={{ movie.asin }}" target="_blank">
-          <img class="recommendation-homepage-image" width="100" src="/assets/images/{{ movie.thumbnail }}" itemprop="image">
+          <img class="recommendation-homepage-image" width="100" src="/assets/images/{{ movie.thumbnail }}">
         </a>
       </li>
     {% endfor %}

@@ -22,8 +22,8 @@ body {
 
 /* Padding is included */
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

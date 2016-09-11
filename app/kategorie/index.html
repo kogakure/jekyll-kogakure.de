@@ -3,6 +3,8 @@ layout: default
 title: Alle Kategorien
 body_class: page-categories
 robots: "noindex,follow"
+sitemap:
+  exclude: true
 ---
 
 <h1>{% if page.title or post.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</h1>

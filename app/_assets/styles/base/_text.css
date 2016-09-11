@@ -111,7 +111,7 @@ acronym {
   letter-spacing: 0.1em;
   text-transform: lowercase;
 
-  .touch &:after {
+  .touch &::after {
     content: " (" attr(title) ") ";
   }
 }

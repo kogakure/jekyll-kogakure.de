@@ -23,11 +23,13 @@ Header set X-Frame-Options DENY
 # | Redirecting/Removing sites                                                 |
 # ------------------------------------------------------------------------------
 
-# Redirects (Gone)
-Redirect Gone /hiragana.html
-Redirect Gone /katakana.html
+# Redirect (Gone/410)
 Redirect Gone /artikel/der-verraeterische-geist/
+Redirect Gone /artikel/ninjakleidung/Wurde/
 Redirect Gone /css-reboot-spring-2006/
+Redirect Gone /hiragana.html
+Redirect Gone /kanji.html/
+Redirect Gone /katakana.html
 Redirect Gone /kurzmeldungen/100000ter-besucher/
 Redirect Gone /kurzmeldungen/abmahnu/
 Redirect Gone /kurzmeldungen/abmahnung-zitat-karl-valentin/
@@ -43,24 +45,35 @@ Redirect Gone /kurzmeldungen/kalender-fuer-ninjutsu-seminare/
 Redirect Gone /kurzmeldungen/kampfgoetter-aus-einer-fernen-zeit-und-welt-auf-pro-7/
 Redirect Gone /kurzmeldungen/kinofilm-ninja-assassin/
 Redirect Gone /kurzmeldungen/kogakurede-version-4/
+Redirect Gone /kurzmeldungen/koto-ryu-taijutsu-no-kata-bujinkan-budo-densho/
 Redirect Gone /kurzmeldungen/microsoft-gibt-tipps-gegen-ninja/
+Redirect Gone /kurzmeldungen/neu-weg-ninja-geheime-techniken/
 Redirect Gone /kurzmeldungen/neue-buecher-herbst-2011-tengu
+Redirect Gone /kurzmeldungen/neue-buecher-herbst-2011-tengu-publishing/
 Redirect Gone /kurzmeldungen/neues-buch-gyokko-ryuu-taijutsu-no-kata-bujinkan-budou-denshou/
 Redirect Gone /kurzmeldungen/neues-buch-ueber-ninja-von-stephen-turnbull-erschienen/
 Redirect Gone /kurzmeldungen/nominierung-fur-das-webdesignbook/
 Redirect Gone /kurzmeldungen/relaunch-mit-django/
 Redirect Gone /kurzmeldungen/teenage-mutant-ninja-turtles/
+Redirect Gone /kurzmeldungen/togakure-ryu-taijutsu-no-kata-bujinkan-budo-densho/
 Redirect Gone /kurzmeldungen/togakure-ryuu-3d-film/
 Redirect Gone /kurzmeldungen/umzug-zu-mt-erfolgreich/
 Redirect Gone /kurzmeldungen/wechsel-des-hosters/
-Redirect Gone /kurzmeldungen/togakure-ryu-taijutsu-no-kata-bujinkan-budo-densho/
-Redirect Gone /kurzmeldungen/neue-buecher-herbst-2011-tengu-publishing/
+Redirect Gone /lexikon/kuma/
+Redirect Gone /mint/pepper/orderedlist/downloads/download.php
+Redirect Gone /service/journal/archiv/2004/10/31/keyboardlets-in-mozilla-firefox/
 Redirect Gone /service/journal/archiv/2005/01/17/planetopia-jamba-und-sonstige-deppen/
-Redirect Gone /mint/pepper/orderedlist/downloads/download.php/?file=http%253A//kogakure.de/images/artikel/werkzeuge-doka.jpg
-Redirect Gone /mint/pepper/orderedlist/downloads/download.php/?file=http%253A//kogakure.de/images/artikel/werkzeuge-gando.jpg
-Redirect Gone /mint/pepper/orderedlist/downloads/download.php/?file=http%253A//kogakure.de/images/artikel/werkzeuge-uchidake.jpg
+Redirect Gone /service/journal/archiv/2005/01/22/und-es-geht-weiter/
+Redirect Gone /shortstat/
+Redirect Gone /tag/anonymitat/
+Redirect Gone /tag/burgerkrieg/
+Redirect Gone /tag/sage/
+Redirect Gone /tag/schlage/
+Redirect Gone /tag/schlosser/
+Redirect Gone /tag/verrater/
 
-# Redirects (Permanent)
+
+# Redirect (Permanent/301)
 Redirect 301 /a.html /lexikon/
 Redirect 301 /b.html /lexikon/
 Redirect 301 /d.html /lexikon/
@@ -134,6 +147,7 @@ Redirect 301 /archiv/                                        /artikel/
 Redirect 301 /inhalt/                                        /artikel/
 Redirect 301 /themen/                                        /kategorie/
 Redirect 301 /kontakt/                                       /info/
+Redirect 301 /artikel/waffen/waffen/                         /artikel/waffen/
 
 RewriteRule ^lexikon/(.+)/$                                  /lexikon/ [R=301,L]
 
@@ -274,7 +288,6 @@ AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
   Options +FollowSymlinks
-  # Options +SymLinksIfOwnerMatch
   RewriteEngine On
   RewriteBase /
 </IfModule>
@@ -296,14 +309,15 @@ AddDefaultCharset utf-8
 # ------------------------------------------------------------------------------
 
 <IfModule mod_rewrite.c>
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_URI} !/$
-  RewriteCond %{REQUEST_URI} !(.*)/$
-  RewriteRule ^(.*)$ $1/ [L,R=301]
+  RewriteEngine On
 
-  # Redirect (www. free internet)
+  # Enforce Domain
   RewriteCond %{HTTP_HOST} !^kogakure\.de$
-  RewriteRule ^(.*)$ {{ site.url }}/$1 [R=301,L]
+  RewriteRule ^(.*)$ http://kogakure.de/$1 [R=301,L]
+
+  # Ensure SSL
+  RewriteCond %{ENV:HTTPS} !=on
+  RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 </IfModule>
 
 # ##############################################################################

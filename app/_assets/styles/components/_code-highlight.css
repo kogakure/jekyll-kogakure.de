@@ -7,7 +7,7 @@
   position: relative;
 
   code {
-    &:after {
+    &::after {
       background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, #ffffff 50%, #ffffff);
       content: " ";
       height: 100%;

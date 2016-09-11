@@ -24,11 +24,11 @@ cite {
 q {
   font-style: italic;
 
-  &:before {
+  &::before {
     content: open-quote;
   }
 
-  &:after {
+  &::after {
     content: close-quote;
   }
 }

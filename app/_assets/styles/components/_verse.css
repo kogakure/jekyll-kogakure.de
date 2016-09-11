@@ -17,7 +17,7 @@
 }
 
 .verse-author {
-  &:before {
+  &::before {
     @media screen and (width >= $grid-breakpoint-medium) {
       content: "–";
       padding-left: 0.3em;

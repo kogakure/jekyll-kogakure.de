@@ -154,12 +154,12 @@
 .recommendation-info-details-title {
   color: $dark-moderate-green;
 
-  &:before {
+  &::before {
     content: "";
     display: block;
   }
 
-  &:after {
+  &::after {
     content: ":";
     margin-right: 5px;
   }

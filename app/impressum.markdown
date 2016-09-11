@@ -4,6 +4,8 @@ title: "Impressum"
 description: "Das Impressum dieser Seite, mit Kontaktinformationen, Haftungshinweis und Quellenangabe für verwendete Grafiken."
 permalink: "impressum/"
 robots: "noindex,follow"
+sitemap:
+  exclude: true
 ---
 
 Stefan Imhoff
@@ -21,5 +23,3 @@ Sollten Sie einen Link finden, der auf eine Webseite verlinkt, die gegen geltend
 ## Verwendete Grafiken
 
 Diese Seite verwendet einige Hintergrundmuster von *Subtle Patterns*: [Bright Squares](http://subtlepatterns.com/bright-squares/) von [Waseem Dahman](https://twitter.com/dwaseem) und [Stacked Circles](http://subtlepatterns.com/stacked-circles/) von [Saqib](http://960development.com/).
-
-Das Flipboard-Cover verwendet das Foto [SAMURAI sniping team(AD1575)_2](https://www.flickr.com/photos/umeume/8738808229) von [Ume-Ameixa](https://www.flickr.com/photos/umeume/).

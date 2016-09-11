@@ -46,11 +46,3 @@ $pagination-background: $light-grey;
 /* Scrollbars */
 $scroll-handle-color:       $strong-green;
 $scroll-handle-hover-color: $black;
-
-/* Flipboard */
-$flipboard-color-info:               $very-light-grey;
-$flipboard-color-author:             $dimmed-grey;
-$flipboard-cover-background:         $very-dark-grey;
-$flipboard-button-background:        $strong-green;
-$flipboard-button-background-hover:  $strong-green;
-$flipboard-button-background-active: $dark-moderate-green;

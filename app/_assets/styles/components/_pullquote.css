@@ -17,11 +17,11 @@
   padding: 0;
   text-align: center;
 
-  p:first-child:before {
+  p:first-child::before {
     content: open-quote;
   }
 
-  p:last-child:after {
+  p:last-child::after {
     content: close-quote;
   }
 
@@ -48,8 +48,8 @@ blockquote.pullquote[lang|=ja] {
 }
 
 /* Left/right aligned pullquotes */
-.pullquote-right:before,
-.pullquote-left:before {
+.pullquote-right::before,
+.pullquote-left::before {
   @extend pullquote;
   border: 0;
   content: attr(data-pullquote);
@@ -64,7 +64,7 @@ blockquote.pullquote[lang|=ja] {
   position: relative;
   top: 15px;
 
-  @media screen and (width <= $content-medium) {
+  @media screen and (width <= $grid-breakpoint-medium) {
     margin-right: 0;
   }
 
@@ -78,7 +78,7 @@ blockquote.pullquote[lang|=ja] {
   }
 }
 
-.pullquote-left:before {
+.pullquote-left::before {
   float: left;
   margin-bottom: $default-spacing-bottom;
   margin-left: -$default-spacing-left;
@@ -86,7 +86,7 @@ blockquote.pullquote[lang|=ja] {
   margin-top: 0;
   text-align: right;
 
-  @media screen and (width <= $content-medium) {
+  @media screen and (width <= $grid-breakpoint-medium) {
     margin-left: 0;
     margin-right: $default-spacing-right;
   }
