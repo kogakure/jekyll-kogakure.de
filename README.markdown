@@ -1,3 +1,5 @@
+![Maintenance](https://img.shields.io/maintenance/no/2017.svg)
+
 # kogakure.de
 
 This is the source of my [martial arts website](http://kogakure.de/) build with [Jekyll](http://jekyllrb.com/) and [Gulp.js](http://gulpjs.com/).
